@@ -27,10 +27,15 @@
 ### Functional Specification :
 
 #### 1. Introduction:
+- A. Brief history of Pac-man :
+- B. Description of Pac-man as a game :
 
-#### 2. Objective
+#### 2. Objective:
+- A.Replicate classic Pac-Man in x86 assembly:
+- B. Enhance randomness and scores system
 
 #### 3. Personas
+
 
 #### 4. Use case
 
