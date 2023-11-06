@@ -23,3 +23,27 @@
 </details>
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
+
+### Functional Specification :
+
+#### 1. Introduction:
+
+#### 2. Objective
+
+#### 3. Personas
+
+#### 4. Use case
+
+#### 5. Blending step
+
+#### 6. Functionality
+
+#### 7. Interfaces
+
+#### 8. Evaluation criteria
+
+#### 9. Conclusion
+
+#### References
+
+#### Glossary
