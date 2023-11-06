@@ -12,11 +12,12 @@
     - [2. Objective](#2-objective)
     - [3. Personas](#3-personas)
     - [4. Use case](#4-use-case)
-    - [5. Blending step](#5-blending-step)
+    - [5. Blending step](#5-)
     - [6. Functionalities](#6-functionalities)
-    - [7. Interface](#7-interface)
-    - [8. Evaluation criteria](#8-evaluation-criteria)
-    - [9. Conclusion](#9-conclusion)
+    - [7. Milestones](#7-Milestones)
+    - [8. Interface](#8-interface)
+    - [9. Evaluation criteria](#9-evaluation-criteria)
+    - [10. Conclusion](#10-conclusion)
     - [Reference](#reference)
     - [Glosary](#glosary)
 
@@ -44,15 +45,17 @@
 
 #### 4. Use case
 
-#### 5. Blending step
+#### 5. 
 
 #### 6. Functionality
 
-#### 7. Interfaces
+#### 7. Milestones
 
-#### 8. Evaluation criteria
+#### 8. Interfaces
 
-#### 9. Conclusion
+#### 9. Evaluation criteria
+
+#### 10. Conclusion
 
 #### References
 
