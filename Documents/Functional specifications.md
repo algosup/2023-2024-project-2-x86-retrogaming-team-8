@@ -32,6 +32,8 @@
 
     Pac-Man is a game that was <ins>created by Namco and directed by Toru Iwatani.</ins> The project started in 1970s and was implemented in an arcade in 1980 with the name of <ins>“Puck Man”.</ins> Then the name of the game was changed for the one we all know nowaday when it was imported into the US, after that Pac-Man started to become popular.
 
+    ![Alt text](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROYKgZAO-K5yrvdLq9pz355DYI8TxcM4gI5A&usqp=CAU )
+
 - B. Description of Pac-man as a game :
 
     It can be a wrong question but we need to know “What is Pac-Man ?”. This video game is an arcade game with simple rules. We have a main character named “Pac-Man” that refer  to an image of a pizza with a slice removed and ghosts which are the enemies of the main character. Then the player need to eat every little cubes without be touched by the ghosts to have an access to the next level.
@@ -49,8 +51,22 @@
 #### 5. 
 
 #### 6. Functionality
+- "Better randomness" (improve ghost behavior).
+
+- “More stuff” (Like the pill that allow us to eat ghosts, x2 score, )
+
+- “Events” (at some moments or if we complete conditions we can have different events that start)
+
+- “Difficulties levels” (Different difficulties levels easy to hard)
+
+- "Score management" (scoring system)
+
+- "High scores" (record and display).
+
+- "Sounds and music" (sound effects and music).
 
 #### 7. Milestones
+
 - Deadlines:
 
 <div align="center">
@@ -67,6 +83,11 @@
 
 
 #### 8. Interfaces
+
+- Layout, maze, Pac-Man, ghosts, HUD.
+    - We can reorganize the HUD to gather in one place bonus, lives and score.
+- Menus, settings, controls.
+    - For this game, we must implement a start screen with a choice of the levels and some parameters like “mute the sound effect”. During the game we need a “menu” control to have a pause functionality and a way to reset the game.
 
 #### 9. Evaluation criteria
 
