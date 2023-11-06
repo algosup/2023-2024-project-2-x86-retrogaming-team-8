@@ -58,6 +58,17 @@
 | Paragraph   | Text        |
 | text        | Text        |
 
+Dates | Milestones
+-|-
+11-06-23 at 9.30am | Project start
+11-13-23 at 1.30pm | Functional specification deadline
+11-27-23 at 1.30pm | Technical specification deadline
+12-08-23 at 5pm | Test plan deadline
+12-11-23 at 5pm | Working prototype deadline
+12-21-23 at 5pm | Final product deadline
+
+*DD-MM-YY*
+
 #### 8. Interfaces
 
 #### 9. Evaluation criteria
