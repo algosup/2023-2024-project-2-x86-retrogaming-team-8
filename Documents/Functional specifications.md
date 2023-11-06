@@ -47,6 +47,9 @@
 - B. Enhance randomness and scores system
 
 #### 4. Personas & Use Case
+- Our main target are the retrogamers from any gender, giving them a fresh air of an old game and adding some new mechanics while maintaining the old design.
+
+
 
 #### 5. 
 
