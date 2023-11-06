@@ -1,23 +1,42 @@
-<!-- Main Title -->
-
 <div align="center">
 
-  ![PACMAN](file:///Users/bistrel-tsangue/Downloads/Pacman_HD.png)
-  
+  <div style="display: inline-block;">
+      <img src="pacman.png" alt="PACMAN" width="70" height="70">
+  </div>
+  <div style="display: inline-block; position: relative; top: -18px;">
+      <img src="arrow.png" alt="assembly" width="60" height="30">
+  </div>
+  <div style="display: inline-block;">
+      <img src="assembly.png" alt="assembly" width="70" height="70">
+  </div>
+
 </div>
 
-
+# 2023-2024-project-2-x86-retrogaming-team-8
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 <div align="center">
 
 |<p align="center"><h3>Functional Specifications</h3>|<p align="center"><h3>Technical Specifications</h3></p>|
 |--|--|
-|<div align="center"><a href="https://github.com/algosup/2022-2023-project-3-harfang3d-binding-Project-7-group/blob/main/Documents/Functional_specifications.md"><img src="/Documents/images/technical/functional.png"></a></p></div>|<div align="center"><a href="https://github.com/algosup/2022-2023-project-3-harfang3d-binding-Project-7-group/blob/main/Documents/Technical_specifications.md"><img src="/Documents/images/technical/technical.png"></a></div>|<div align="center"><a href="https://algosup.github.io/2022-2023-project-3-harfang3d-binding-Project-7-group/rust"><img src="/Documents/images/technical/code.png"></a></div>|<div align="center"><a href="https://algosup.github.io/2022-2023-project-3-harfang3d-binding-Project-7-group/graph"><img src="Documents/images/technical/graphView.png"></a></div>|
+|<div align="center"><a href="https://github.com/algosup/2023-2024-project-2-x86-retrogaming-team-8/blob/Documents/Documents/Functional%20specifications.md"><img src="funtional.png" width = "178" height = "180"></a></p></div>|<div align="center"><a href="https://github.com/algosup/2023-2024-project-2-x86-retrogaming-team-8/blob/Documents/Documents/Technical%20specifications.md"><img src="technical.png" width ="178" height = "180"></a></div>|
 
 </div>
 
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
-# 2023-2024-project-2-x86-retrogaming-team-8
+
 ## Description
+  Named as x86-retrogaming, the goal of the project is to Reproduce the game pacman, and add some new features if possible, but keeping the concept of it visualisation exactly like it was during it publish "1970s" 
+
+## Installation
+For this project we have to us dos-bot to emulate a particular system processor that is x86 Architecture, This will help us to run the assembly code on, as the code shall be done in different interface.
+
+## Features
+  1.  Recreate the game pacman in Assembly programming Language
+  2.  The game most visualy look like that of the year it was published "1970s"
+  3.  The program must be run in dos-bot
+  4.  Some newly features can be added on the game  
+
 ## Contributors
 ### Management
 <div align = "center">
