@@ -34,6 +34,8 @@
 
 - B. Description of Pac-man as a game :
 
+    It can be a wrong question but we need to know “What is Pac-Man ?”. This video game is an arcade game with simple rules. We have a main character named “Pac-Man” that refer  to an image of a pizza with a slice removed and ghosts which are the enemies of the main character. Then the player need to eat every little cubes without be touched by the ghosts to have an access to the next level.
+
 #### 2. Objective:
 - A.Replicate classic Pac-Man in x86 assembly:
 
