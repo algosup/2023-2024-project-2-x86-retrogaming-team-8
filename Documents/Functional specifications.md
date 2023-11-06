@@ -28,10 +28,15 @@
 
 #### 1. Introduction:
 - A. Brief history of Pac-man :
+
+    Pac-Man is a game that was <ins>created by Namco and directed by Toru Iwatani.</ins> The project started in 1970s and was implemented in an arcade in 1980 with the name of <ins>“Puck Man”.</ins> Then the name of the game was changed for the one we all know nowaday when it was imported into the US, after that Pac-Man started to become popular.
+
 - B. Description of Pac-man as a game :
 
 #### 2. Objective:
 - A.Replicate classic Pac-Man in x86 assembly:
+
+
 - B. Enhance randomness and scores system
 
 #### 3. Personas
