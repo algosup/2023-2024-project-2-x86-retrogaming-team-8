@@ -3,9 +3,6 @@
   <div style="display: inline-block;">
       <img src="pacman.png" alt="PACMAN" width="70" height="70">
   </div>
-  <div style="display: inline-block; position: relative; top: -18px;">
-      <img src="arrow.png" alt="assembly" width="60" height="30">
-  </div>
   <div style="display: inline-block;">
       <img src="assembly.png" alt="assembly" width="70" height="70">
   </div>
