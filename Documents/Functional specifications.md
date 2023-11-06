@@ -52,6 +52,13 @@
 #### 6. Functionality
 
 #### 7. Milestones
+- Deadlines:
+
+| Dates     | Description |
+| :-----------: | :------------------|
+| Header      | Title       |
+| Paragraph   | Text        |
+| text        | Text        |
 
 Dates | Milestones
 -|-
