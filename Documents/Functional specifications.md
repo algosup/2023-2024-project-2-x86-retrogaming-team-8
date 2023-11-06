@@ -16,8 +16,9 @@
     - [6. Functionalities](#6-functionalities)
     - [7. Milestones](#7-Milestones)
     - [8. Interface](#8-interface)
-    - [9. Evaluation criteria](#9-evaluation-criteria)
-    - [10. Conclusion](#10-conclusion)
+    - [9.Risk & Assumption](#9-risk--assumption)
+    - [10. Evaluation criteria](#9-evaluation-criteria)
+    - [11. Conclusion](#10-conclusion)
     - [Reference](#reference)
     - [Glosary](#glosary)
 
@@ -88,10 +89,11 @@
     - We can reorganize the HUD to gather in one place bonus, lives and score.
 - Menus, settings, controls.
     - For this game, we must implement a start screen with a choice of the levels and some parameters like “mute the sound effect”. During the game we need a “menu” control to have a pause functionality and a way to reset the game.
+#### 9. Risk & Assumption
 
-#### 9. Evaluation criteria
+#### 10. Evaluation criteria
 
-#### 10. Conclusion
+#### 11. Conclusion
 
 #### References
 
