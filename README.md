@@ -1,8 +1,10 @@
 <div align="center" style = "display: flex">
 
-  <div style="display: flex;">
+  <div style="display: flex; ">
       <img src="pacman.png" alt="PACMAN" width="70" height="70">
-      <span style="padding-bottom: 20px;">→</span>
+      <div style=" padding-top: 10px">
+       <img src="link.png" alt="link" width="50" height="50">
+       </div>
       <img src="assembly.png" alt="assembly" width="70" height="70">
   </div>
 
