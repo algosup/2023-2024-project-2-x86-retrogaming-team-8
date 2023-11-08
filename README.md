@@ -2,7 +2,7 @@
 
   <div style="display: flex; align-items: baseline;">
       <img src="pacman.png" alt="PACMAN" width="70" height="70">
-      <span style="text-align: center;">→</span>
+      <span style="padding-top: 20px;">→</span>
       <img src="assembly.png" alt="assembly" width="70" height="70">
   </div>
 
