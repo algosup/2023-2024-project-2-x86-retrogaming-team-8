@@ -115,6 +115,7 @@ Reproduce the game pacman in assembly programming language, Keeping it old visua
     - The player should only use the four arrows keys to steer Pac-Man movement controls (up, down, left, right).
     - During the game we need a “menu” control to have a pause functionality and a way to reset the game.
 
+<<<<<<< Updated upstream
 #### 7. Risk & Assumption
 - Technical risk : 
   - The Assembly programming language is complex and error-prone, which could increase debbugging and development time.
@@ -122,18 +123,39 @@ Reproduce the game pacman in assembly programming language, Keeping it old visua
   - Assembly language is less common today, finding resources, documentation, and community support may be challenging.
 - Skill risk :
   - The proficiency level of the development team in assembly language is critical. Misestimating the team's skill level could lead to delays.
+=======
+#### 7. Risks & Assumption
+#### ***Risks***:
+
+Here below are the some risk we can encounter throughout the Project.
+
+-  
+
+#### ***Assumption***:
+
+We gather some assumption for the risk we can to encountered to resolve the problem.
+
+-
+
+>>>>>>> Stashed changes
 
 #### 8. Evaluation criteria
 - The game has to be entertaining as much as possible
-- Gameplay criteria
-- One of the main important thing and that's make a major part of the dificulty is the different walls that makes obstacle for the player and the ghost 
-- Also, the level has to change when all the cubes have been taken
-- performance criteria
-- Adding the score and highscore system add a reason to play the game.
-- user satisfaction criteria
+- Graphique visual Design of the game
+- No crash detected during the gameplay session.
+- Resonnable level, No impossible level.
+- New features added.
+- Speed of the Game
+- All functionalities present and well presented.
+- user satisfaction criteria.
+
 #### 9. Conclusion
+To conclude, the game have to be significant, entertaining, and presentable, and should be completed within 2 months.
 
+### References
+Pacman: [Pacman Game](https://www.toupty.com/jeupacman.html)
 
+<<<<<<< Updated upstream
 #### References
 [gamedeveloper.com](https://www.gamedeveloper.com/design/the-pac-man-dossier#close-modal)
 [Wikipédia](https://fr.wikipedia.org/wiki/Wikip%C3%A9dia:Accueil_principal)
@@ -142,3 +164,6 @@ Reproduce the game pacman in assembly programming language, Keeping it old visua
 HUD: In video gaming, the HUD (heads-up display) or status bar is the method by which information is visually relayed to the player as part of a game's user interface.[1] It takes its name from the head-up displays used in modern aircraft.
 
 The HUD is frequently used to simultaneously display several pieces of information including the main character's health, items, and an indication of game progression (such as score or level).
+=======
+### Glossary
+>>>>>>> Stashed changes
