@@ -1,9 +1,9 @@
 <div align="center">
 
-  <div style="display: inline-block;">
+  <div style="display: flex;">
       <img src="pacman.png" alt="PACMAN" width="70" height="70">
   </div>
-  <div style="display: inline-block;">
+  <div style="display: flex;">
       <img src="assembly.png" alt="assembly" width="70" height="70">
   </div>
 
