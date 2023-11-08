@@ -44,8 +44,22 @@
 
 #### 3. Objective:
 - A.Replicate classic Pac-Man in x86 assembly:
+  - we have to replicate the classic Pac man on the x86 assembly language so it can be played on an 80's computer.
+  For this, we are using DOS BOX emulator.
 
-- B. Enhance randomness and scores system
+<div align="center">
+
+  ![Alt text](https://upload.wikimedia.org/wikipedia/commons/d/dd/DOSBox_icon.png)
+
+  </div>
+
+- B. Enhance randomness and scores system :
+
+  - We need to enhance the randomization of the movement of the ghosts in the maze and the generation of the maze for each level adding our possible new mechanics.
+
+  - We also need to calculate the score for the cubes catched and the other methods to gain the points such as, killing a ghost using the big cubes for example.
+
+  - Finally, at each game over, we need to enhance high scores so the player can see if they were better last time or not.
 
 #### 4. Personas & Use Case
 - Our main target are the retrogamers from any gender, giving them a fresh air of an old game and adding some new mechanics while maintaining the old design.
@@ -115,7 +129,7 @@
 - performance criteria
   - Adding the score and highscore system add a reason to play the game.
 - user satisfaction criteria
-  - 
+  - The game has to be entertaining as much as possible
 #### 11. Conclusion
 
 #### References
