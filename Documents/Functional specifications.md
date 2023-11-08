@@ -37,7 +37,7 @@
 <br></br>
 - B. Description of Pac-man as a game :
 
-    It can be a wrong question but we need to know “What is Pac-Man ?”. This video game is an arcade game with simple rules. We have a main character named “Pac-Man” that refer  to an image of a pizza with a slice removed and ghosts which are the enemies of the main character. Then the player need to eat every little cubes without be touched by the ghosts to have an access to the next level.
+    It can be a wrong question but we need to know “What is Pac-Man ?”. This video game is an arcade game with simple rules. We have a main character named “Pac-Man” that refer  to an image of a pizza with a slice removed and ghosts which are the enemies of the main character. Pac-Man's gameplay is centered on strategy and quick reflexes. Players must navigate the maze and avoid the ghosts, each of which has its own pursuit pattern. Then the player need to eat every little cubes without be touched by the ghosts to have an access to the next level. However there’s a specific cube that is bigger than the other, this cube allow Pac-man to attack the ghost and take them out for a short time and giving points for a better score and to have access to the next level.
 
 #### 2. Project Overview:
 
@@ -56,25 +56,28 @@
 
 #### 6. Functionality
 - "Better randomness"
-  - improve ghost behavior.
+  - We could improve the ghost movement algorithm and their different modes :
+    - chase → A ghost’s objective in chase mode, is to find and capture Pac-Man by hunting him
+    - scatter → In scatter mode the ghost give up the chase for a few second and head for their respective home corners. It’s a brief rest soon enough, they will revert to chase mode and be after Pac-Man again
+    - frightened → Ghosts enter frightened mode whenever Pac-Man eats one of the four energizers located in the far corners of the maze
 <br></br>
 - Adding More Mechanics
-  - For exemple adding a limited 2 times score bonus
+  - For exemple adding a limited 2 times score bonus.
 <br></br>
 - Adding “Events” 
-  - At some moments or if we complete conditions we can have different events that start
+  - At some moments or if we complete conditions we can have different events that start.
 <br></br>
 - “Difficulties levels” (optional)
-  - Different difficulties levels easy to hard
+  - We could add different difficulties levels easy to hard, like harder maze or a faster gameplay
 <br></br>
 - "Score management" (scoring system)
-  - calculate the score depending on the items the player take.
+  - Calculate the score depending on the items the player takes.
 <br></br>
 - "High scores" (record and display).
-  - placing the highscore on the top of the screen during the game.
+  - Placing the highscore on the top of the screen during the game.
 <br></br>
 - "Sounds and music" (sound effects and music).
-  - we are adding the sound effect of the original Pacman and add remixed music addapted for the 8bit system.
+  - We are adding the sound effect of the original Pacman and add remixed music addapted for the 8bit system.
 
 ![Alt text](https://i.guim.co.uk/img/media/8152f8ea7f06fd8ef5c68a3a594e6ac35dfd774b/0_342_800_480/master/800.jpg?width=465&dpr=1&s=none)
 
@@ -99,9 +102,13 @@
 
 - Layout, maze, Pac-Man, ghosts, HUD.
     - We can reorganize the HUD to gather in one place bonus, lives and score.
+    - The Pac-man design should be on pixel and the ghosts too
 <br></br>
 - Menus, settings, controls.
-    - For this game, we must implement a start screen with a choice of the levels and some parameters like “mute the sound effect”. During the game we need a “menu” control to have a pause functionality and a way to reset the game.
+    - For this game, we must implement a start screen with a choice of the levels and some parameters like “mute the sound effect”.
+    - The player should only use the four arrows keys to steer Pac-Man movement controls (up, down, left, right).
+    - During the game we need a “menu” control to have a pause functionality and a way to reset the game.
+
 #### 9. Risk & Assumption
 - The risks
   - s
@@ -121,3 +128,5 @@
 #### References
 
 #### Glossary
+
+HUD : 
