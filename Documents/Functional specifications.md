@@ -69,6 +69,8 @@
 
 - "Sounds and music" (sound effects and music).
 
+![Alt text](https://i.guim.co.uk/img/media/8152f8ea7f06fd8ef5c68a3a594e6ac35dfd774b/0_342_800_480/master/800.jpg?width=465&dpr=1&s=none)
+
 #### 7. Milestones
 
 - Deadlines:
@@ -93,9 +95,18 @@
 - Menus, settings, controls.
     - For this game, we must implement a start screen with a choice of the levels and some parameters like “mute the sound effect”. During the game we need a “menu” control to have a pause functionality and a way to reset the game.
 #### 9. Risk & Assumption
+- The risks
+  - s
+- Assumption 
+  - s
 
 #### 10. Evaluation criteria
-
+- Gameplay criteria
+  - s
+- performance criteria
+  - u
+- user satisfaction criteria
+  - s
 #### 11. Conclusion
 
 #### References
