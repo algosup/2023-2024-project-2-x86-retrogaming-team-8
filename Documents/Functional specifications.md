@@ -113,9 +113,9 @@
   - One of the main important thing and that's make a major part of the dificulty is the different walls that makes obstacle for the player and the ghost 
   - Also, the level has to change when all the cubes have been taken
 - performance criteria
-  - u
+  - Adding the score and highscore system add a reason to play the game.
 - user satisfaction criteria
-  - s
+  - 
 #### 11. Conclusion
 
 #### References
