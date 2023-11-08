@@ -34,7 +34,7 @@
     Pac-Man is a game that was <ins>created by Namco and directed by Toru Iwatani.</ins> The project started in 1970s and was implemented in an arcade in 1980 with the name of <ins>“Puck Man”.</ins> Then the name of the game was changed for the one we all know nowaday when it was imported into the US, after that Pac-Man started to become popular.
 
     ![Alt text](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROYKgZAO-K5yrvdLq9pz355DYI8TxcM4gI5A&usqp=CAU )
-
+<br></br>
 - B. Description of Pac-man as a game :
 
     It can be a wrong question but we need to know “What is Pac-Man ?”. This video game is an arcade game with simple rules. We have a main character named “Pac-Man” that refer  to an image of a pizza with a slice removed and ghosts which are the enemies of the main character. Then the player need to eat every little cubes without be touched by the ghosts to have an access to the next level.
@@ -57,21 +57,22 @@
 #### 6. Functionality
 - "Better randomness"
   - improve ghost behavior.
-
+<br></br>
 - Adding More Mechanics
   - For exemple adding a limited 2 times score bonus
-
+<br></br>
 - Adding “Events” 
   - At some moments or if we complete conditions we can have different events that start
-
+<br></br>
 - “Difficulties levels” (optional)
   - Different difficulties levels easy to hard
-
+<br></br>
 - "Score management" (scoring system)
   - calculate the score depending on the items the player take.
-
+<br></br>
 - "High scores" (record and display).
-  - placing the highscore on the top of the screen during the game
+  - placing the highscore on the top of the screen during the game.
+<br></br>
 - "Sounds and music" (sound effects and music).
   - we are adding the sound effect of the original Pacman and add remixed music addapted for the 8bit system.
 
@@ -98,6 +99,7 @@
 
 - Layout, maze, Pac-Man, ghosts, HUD.
     - We can reorganize the HUD to gather in one place bonus, lives and score.
+<br></br>
 - Menus, settings, controls.
     - For this game, we must implement a start screen with a choice of the levels and some parameters like “mute the sound effect”. During the game we need a “menu” control to have a pause functionality and a way to reset the game.
 #### 9. Risk & Assumption
@@ -108,7 +110,8 @@
 
 #### 10. Evaluation criteria
 - Gameplay criteria
-  - s
+  - One of the main important thing and that's make a major part of the dificulty is the different walls that makes obstacle for the player and the ghost 
+  - Also, the level has to change when all the cubes have been taken
 - performance criteria
   - u
 - user satisfaction criteria
