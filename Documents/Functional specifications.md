@@ -116,6 +116,12 @@ Reproduce the game pacman in assembly programming language, Keeping it old visua
     - During the game we need a “menu” control to have a pause functionality and a way to reset the game.
 
 #### 7. Risk & Assumption
+- Technical risk : 
+  - The Assembly programming language is complex and error-prone, which could increase debbugging and development time.
+- Ressource availability :
+  - Assembly language is less common today, finding resources, documentation, and community support may be challenging.
+- Skill risk :
+  - The proficiency level of the development team in assembly language is critical. Misestimating the team's skill level could lead to delays.
 
 #### 8. Evaluation criteria
 - The game has to be entertaining as much as possible
@@ -129,5 +135,6 @@ Reproduce the game pacman in assembly programming language, Keeping it old visua
 
 
 #### References
-
+[gamedeveloper.com](https://www.gamedeveloper.com/design/the-pac-man-dossier#close-modal)
+[Wikipédia](https://fr.wikipedia.org/wiki/Wikip%C3%A9dia:Accueil_principal)
 #### Glossary
