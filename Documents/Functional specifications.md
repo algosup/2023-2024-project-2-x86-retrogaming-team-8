@@ -55,19 +55,25 @@
 #### 5. 
 
 #### 6. Functionality
-- "Better randomness" (improve ghost behavior).
+- "Better randomness"
+  - improve ghost behavior.
 
-- “More stuff” (Like the pill that allow us to eat ghosts, x2 score, )
+- Adding More Mechanics
+  - For exemple adding a limited 2 times score bonus
 
-- “Events” (at some moments or if we complete conditions we can have different events that start)
+- Adding “Events” 
+  - At some moments or if we complete conditions we can have different events that start
 
-- “Difficulties levels” (Different difficulties levels easy to hard)
+- “Difficulties levels” (optional)
+  - Different difficulties levels easy to hard
 
 - "Score management" (scoring system)
+  - calculate the score depending on the items the player take.
 
 - "High scores" (record and display).
-
+  - placing the highscore on the top of the screen during the game
 - "Sounds and music" (sound effects and music).
+  - we are adding the sound effect of the original Pacman and add remixed music addapted for the 8bit system.
 
 ![Alt text](https://i.guim.co.uk/img/media/8152f8ea7f06fd8ef5c68a3a594e6ac35dfd774b/0_342_800_480/master/800.jpg?width=465&dpr=1&s=none)
 
