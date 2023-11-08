@@ -1,8 +1,8 @@
 <div align="center" style = "display: flex">
 
-  <div style="display: flex;">
+  <div style="display: flex; align-items: baseline;">
       <img src="pacman.png" alt="PACMAN" width="70" height="70">
-      →
+      <span style="text-align: center;">→</span>
       <img src="assembly.png" alt="assembly" width="70" height="70">
   </div>
 
