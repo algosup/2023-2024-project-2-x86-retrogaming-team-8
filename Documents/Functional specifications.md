@@ -131,3 +131,7 @@ Reproduce the game pacman in assembly programming language, Keeping it old visua
 #### References
 
 #### Glossary
+
+HUD: In video gaming, the HUD (heads-up display) or status bar is the method by which information is visually relayed to the player as part of a game's user interface.[1] It takes its name from the head-up displays used in modern aircraft.
+
+The HUD is frequently used to simultaneously display several pieces of information including the main character's health, items, and an indication of game progression (such as score or level).
