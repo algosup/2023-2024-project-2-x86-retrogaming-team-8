@@ -54,70 +54,35 @@ Reproduce the game pacman in assembly programming language, Keeping it old visua
 #### 3. Personas & Use Case
 
 
-<<<<<<< Updated upstream
-#### 3. Objective:
-- A.Replicate classic Pac-Man in x86 assembly:
-  - we have to replicate the classic Pac man on the x86 assembly language so it can be played on an 80's computer.
-  For this, we are using DOS BOX emulator.
-
-<div align="center">
-
-  ![Alt text](https://upload.wikimedia.org/wikipedia/commons/d/dd/DOSBox_icon.png)
-
-  </div>
-
-- B. Enhance randomness and scores system :
-
-  - We need to enhance the randomization of the movement of the ghosts in the maze and the generation of the maze for each level adding our possible new mechanics.
-
-  - We also need to calculate the score for the cubes catched and the other methods to gain the points such as, killing a ghost using the big cubes for example.
-
-  - Finally, at each game over, we need to enhance high scores so the player can see if they were better last time or not.
-=======
 #### 4. Functionality
-- Better randomness: improve ghost behavior.
 
-- :More stuff: Like the pill that allow us to eat ghosts, x2 score
->>>>>>> Stashed changes
-
-- Events at some moments or if we complete conditions we can have different events that start
-
-- Difficulties levels: Different difficulties levels "Easy, Normal and Hard"
-
-- Score management: The game must have an accurate scoring system.
-
-- High scores: record and display.
-
-<<<<<<< Updated upstream
-#### 6. Functionality
-- "Better randomness"
+- :Better randomness:
   - We could improve the ghost movement algorithm and their different modes :
     - chase → A ghost’s objective in chase mode, is to find and capture Pac-Man by hunting him
     - scatter → In scatter mode the ghost give up the chase for a few second and head for their respective home corners. It’s a brief rest soon enough, they will revert to chase mode and be after Pac-Man again
     - frightened → Ghosts enter frightened mode whenever Pac-Man eats one of the four energizers located in the far corners of the maze
-<br></br>
-- Adding More Mechanics
-  - For exemple adding a limited 2 times score bonus.
-<br></br>
-- Adding “Events” 
-  - At some moments or if we complete conditions we can have different events that start.
-<br></br>
-- “Difficulties levels” (optional)
-  - We could add different difficulties levels easy to hard, like harder maze or a faster gameplay
-<br></br>
-- "Score management" (scoring system)
-  - Calculate the score depending on the items the player takes.
-<br></br>
-- "High scores" (record and display).
-  - Placing the highscore on the top of the screen during the game.
-<br></br>
-- "Sounds and music" (sound effects and music).
-  - We are adding the sound effect of the original Pacman and add remixed music addapted for the 8bit system.
-=======
-- Sounds and music: sound effects and music.
 
--Identity: Display a text box that allow the player to put in his name, before starting the game.
->>>>>>> Stashed changes
+- Adding More Mechanics:
+  - For exemple adding a limited 2 times score bonus.
+
+- Adding Events:
+  - At some moments or if we complete conditions we can have different events that start.
+
+- Difficulties levels:
+  - We could add different difficulties levels easy to hard, like harder maze or a faster gameplay
+
+- Score management:
+  - Calculate the score depending on the items the player takes.
+
+- High scores:
+  - Placing the highscore on the top of the screen during the game.
+
+- Sounds and music:
+  - We are adding the sound effect of the original Pacman and add remixed music addapted for the 8bit system.
+
+
+-   Identity: 
+    - Display a text box that allow the player to put in his name, before starting the game.
 
 ![Alt text](https://i.guim.co.uk/img/media/8152f8ea7f06fd8ef5c68a3a594e6ac35dfd774b/0_342_800_480/master/800.jpg?width=465&dpr=1&s=none)
 
@@ -140,41 +105,29 @@ Reproduce the game pacman in assembly programming language, Keeping it old visua
 
 #### 6. Interfaces
 
-<<<<<<< Updated upstream
 - Layout, maze, Pac-Man, ghosts, HUD.
     - We can reorganize the HUD to gather in one place bonus, lives and score.
     - The Pac-man design should be on pixel and the ghosts too
-<br></br>
+
+
 - Menus, settings, controls.
     - For this game, we must implement a start screen with a choice of the levels and some parameters like “mute the sound effect”.
     - The player should only use the four arrows keys to steer Pac-Man movement controls (up, down, left, right).
     - During the game we need a “menu” control to have a pause functionality and a way to reset the game.
 
-#### 9. Risk & Assumption
-- The risks
-  - s
-- Assumption 
-  - s
-
-#### 10. Evaluation criteria
-- Gameplay criteria
-  - One of the main important thing and that's make a major part of the dificulty is the different walls that makes obstacle for the player and the ghost 
-  - Also, the level has to change when all the cubes have been taken
-- performance criteria
-  - Adding the score and highscore system add a reason to play the game.
-- user satisfaction criteria
-  - The game has to be entertaining as much as possible
-#### 11. Conclusion
-=======
 #### 7. Risk & Assumption
 
 #### 8. Evaluation criteria
-
+- The game has to be entertaining as much as possible
+- Gameplay criteria
+- One of the main important thing and that's make a major part of the dificulty is the different walls that makes obstacle for the player and the ghost 
+- Also, the level has to change when all the cubes have been taken
+- performance criteria
+- Adding the score and highscore system add a reason to play the game.
+- user satisfaction criteria
 #### 9. Conclusion
->>>>>>> Stashed changes
+
 
 #### References
 
 #### Glossary
-
-HUD : 
