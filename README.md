@@ -1,7 +1,7 @@
 <div align="center" style = "display: flex">
       <img src="pacman.png" alt="PACMAN" width="70" height="70">
        <img src="link.png" alt="link" width="50" height="50">
-      <img src="assembly.png" alt="assembly" width="70" height="70">
+      <img src="assembly.png" alt="assembly" width="80" height="80">
 </div>
 
 # 2023-2024-project-2-x86-retrogaming-team-8
