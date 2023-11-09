@@ -12,13 +12,14 @@
     - [**2. Project Overview:**](#2-project-overview)
       - [**1. Project Scope:**](#1-project-scope)
       - [**2. Objective:**](#2-objective)
-      - [**3. Personas \& Use Case**](#3-personas--use-case)
+      - [**3. Personas & Use Case**](#3-personas--use-case)
       - [**4. Functionality**](#4-functionality)
       - [**5. Milestones**](#5-milestones)
       - [**6. Interfaces**](#6-interfaces)
-      - [**7. Risk \& Assumption**](#7-risk--assumption)
-      - [**8. Evaluation criteria**](#8-evaluation-criteria)
-      - [**9. Conclusion**](#9-conclusion)
+      - [**7. Risk & Assumption**](#7-risk--assumption)
+      - [**8. Non Functional**](#8-non-functional)
+      - [**9. Evaluation criteria**](#9-evaluation-criteria)
+      - [**10. Conclusion**](#9-conclusion)
     - [**References**](#references)
     - [**Glossary**](#glossary)
 
@@ -58,28 +59,77 @@ Reproduce the game pacman in assembly programming language, Keeping it old visua
 #### **4. Functionality**
 
 - *Better randomness*:
-  - We could improve the ghost movement algorithm and their different modes :
+  - Improve of the ghost movement algorithm and their different modes :
     - chase → A ghost’s objective in chase mode, is to find and capture Pac-Man by hunting him
     - scatter → In scatter mode the ghost give up the chase for a few second and head for their respective home corners. It’s a brief rest soon enough, they will revert to chase mode and be after Pac-Man again
     - frightened → Ghosts enter frightened mode whenever Pac-Man eats one of the four energizers located in the far corners of the maze
-
+    <div align="center">
+    <img src="https://wallpapers.com/images/hd/pacman-2560-x-1440-d5yj0fug2f7amq51.jpg" alt="assembly" width="200" height="150">
+    </div>
 - *Adding More Mechanics*:
-  - For exemple adding a limited 2 times score bonus.
-
-- *Adding Events*:
-  - At some moments or if we complete conditions we can have different events that start.
+  - Adding a limited 2 times score bonus.
 
 - *Difficulties levels*:
-  - We could add different difficulties levels easy to hard, like harder maze or a faster gameplay
+  - Adding different difficulties levels "Easy, Normal and Hard", like harder maze for a faster gameplay.
 
 - *Score management*:
   - Calculate the score depending on the items the player takes.
 
 - *High scores*:
-  - Placing the highscore on the top of the screen during the game.
+  - Placing the highscore on the top of the screen during the game is part of the newly feature to be implemented in case deadlines are not meet.
 
 - *Sounds and music*:
-  - We are adding the sound effect of the original Pacman and add remixed music addapted for the 8bit system.
+  - Add the sound effect of the original Pacman and add remixed music addapted for the 8bit system.
+    <figure>
+    <audio controls>
+    <source src="Intro.mp3" type="audio/mp3">
+    </audio>
+    <figcaption>Click play to hear the sound "Intro".</figcaption>
+    </figure>
+
+    <figure>
+    <audio controls>
+    <source src="Ghost.mp3" type="audio/mp3">
+    </audio>
+    <figcaption>Click play to hear the sound "Ghost".</figcaption>
+    </figure>
+
+    <figure>
+    <audio controls>
+    <source src="Fruit.mp3" type="audio/mp3">
+    </audio>
+    <figcaption>Click play to hear the sound "Fruit".</figcaption>
+    </figure>
+
+    <figure>
+    <audio controls>
+    <source src="Extra.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+    </audio>
+    <figcaption>Click play to hear the sound "Extra".</figcaption>
+    </figure>
+
+    <figure>
+    <audio controls>
+    <source src="Death.mp3" type="audio/mp3">
+    </audio>
+    <figcaption>Click play to hear the sound "Death".</figcaption>
+    </figure>
+
+    <figure>
+    <audio controls>
+    <source src="Cutscene.mp3" type="audio/mp3">
+    </audio>
+    <figcaption>Click play to hear the sound "Cutscene".</figcaption>
+    </figure>
+
+    <figure>
+    <audio controls>
+    <source src="Chomp.mp3" type="audio/mp3">
+    </audio>
+    <figcaption>Click play to hear the sound "Chomp".</figcaption>
+    </figure>
+
 
 
 -   *Identity*: 
@@ -127,48 +177,86 @@ Reproduce the game pacman in assembly programming language, Keeping it old visua
   - Some potential technical challenges related to x86 assembly programming and DOSBox compatibility. For example, difficulties in optimizing performance or handling low-level hardware interactions.
 
 - *Scope Risks*:
-  - Note the risk of feature creep, where additional features or requirements may be introduced during the project, potentially affecting the project's timeline.
+  - Risk of feature creep, where additional features or requirements may be introduced during the project, potentially affecting the project's timeline.
 
 - *Testing Risks*:
-  - Address potential challenges in testing the game, especially in an emulator environment, and the need for thorough quality assurance.
+  - Potential challenges in testing the game, especially in an emulator environment, and the need for thorough quality assurance.
 
 - *Performance Risks*:
   - We have to consider the risk of performance bottlenecks or slow gameplay on less powerful systems when running in DOSBox.
 
 - *Legal and Intellectual Property Risks*:
-  - In case we are planning to publish the game we have to consider the copyright issues related to Pac-Man's intellectual property.
-  
-- *External Dependencies Risks*:
-  - Note any dependencies on third-party libraries, tools, or services that could pose risks if they change or become unavailable.
+  - Before publishing the game we have to consider the copyright issues related to Pac-Man's intellectual property.
 
 **Assumptions:**
 
 - *Hardware and Software Assumptions*:
-  - Specify the hardware and software environments you assume players will use, such as the minimum system requirements for running the game in DOSBox.
-
-- *Development Environment Assumptions*:
-  - Describe the assumed development environment, including the development tools, assemblers, and debuggers that the team will use.
+  - We will create a Package that contain all necessary files that will be needed to run the game in DOSBox no matter the system.
 
 - *Project Timeline Assumptions*:
-  - State any assumptions regarding project timelines, milestones, and release dates, based on the current project plan.
+    - Understanding the Assembly programing language (1 week):
+Spend focused time studying the programing language and understand how it works, more precisely x86 processor.
+
+    - Planning and Design (1 week):
+Quickly outline the key components and design the structure of your assembly implementation.
+
+    - Setting Up Development Environment (1 week):
+Swiftly set up your assembly development environment, ensuring it's ready for coding.
+
+    - Game Loop, Basic Graphics and prototype (1-2 weeks):
+Prioritize implementing the core game loop and basic graphics. Focus on displaying the maze and Pac-Man and a ready prototype.
+
+    - Input Handling and Minimal Collision (1 week):
+Implement basic input handling for Pac-Man's movement and minimal collision detection.
+
+    - Testing and Debugging (1 week):
+Start testing early and debug as you go. Identify major issues and fix them promptly.
+
+    - Finalization and Documentation (1 week):
+Wrap up the project, make sure everything works, and document your code. Prepare a simple readme file.
 
 - *Resource Assumptions*:
-  - Clearly outline assumptions related to resource availability, such as the team's availability, skill levels, and access to necessary equipment.
+    - Use project planning tools or documents to outline your project's scope and tasks.
+    - Consider using collaboration tools for communication and sharing resources.
+    - Find or create simple sound effects for eating pellets, movement, and other game events.
+    - Online documentation: Access relevant documentation for your chosen assembly language.
+    - Assembly language tutorials: Utilize tutorials and guides to enhance your understanding.
+    - Choose a suitable assembly language and set up the necessary tools for coding (NASM for x86 assembly).
+
 
 - *Emulator Assumptions*:
-  - Assume a specific version or configuration of DOSBox for development and testing purposes unless other emulator versions are considered.
+  - Use the latest version of DOSBox for it new features, and latest improvement.
 
 - *Testing Assumptions*:
-  - Specify any testing assumptions, such as the availability of a comprehensive test suite and access to test devices or platforms.
+  - Create test case for each function to ensure the program works properly
+  - Unit test will be conducted for individual components, such as the game loop, input handling, and collision detection.
 
 - *Game Design Assumptions*:
-  - List any design assumptions, including game mechanics, level design, and features that are predefined.
+    - The primary goal is to preserve the classic Pac-Man gameplay experience.
+    - The focus will be on a single-player experience without incorporating multiplayer features.
+    - Player input will be limited to keyboard controls to simplify development.
+    - A straightforward scoring system will be implemented without complex scoring mechanics.
 
-- *Compliance and Licensing Assumptions*:
-  - Address any assumptions about the legal and licensing requirements, such as adherence to open-source licenses or intellectual property rights.
+#### **8. Non Functional**
+1. Performance Requirements:
 
+    - Response Time: The input are very reactive and fast, immediately as the user initiate an action.
+    - Frame Rate: The game need a minimum frame rate of 60fps.
+    - Loading Time: The game have to be very fast when loading a short time delay during loading and game starting.
 
-#### **8. Evaluation criteria**
+2. Compatibility:
+
+    - The game doesn't have any plateform or system preference, run smoothly on all system.
+
+3. Documentation:
+
+    - The functional and technical documents will be needed by developers to work out on the project.
+    - A useful user manual provided for end user to have complete detail on how the game function and how to play it.
+
+4. Performance on Low-End Systems:
+    - The game should properly work on all type of system in terms of performance, whether high or low performance.
+
+#### **9. Evaluation criteria**
 - The game has to be entertaining as much as possible.
 - Evaluate the graphique visual Design and audio of the game.
 - No crash detected during the gameplay session.
@@ -179,8 +267,8 @@ Reproduce the game pacman in assembly programming language, Keeping it old visua
 - The game have to satisfied those who are playing "User" nand the customer.
 - Robutness of the program.
 
-#### **9. Conclusion**
-
+#### **10. Conclusion**
+To conclude, the game have to be significant, entertaining, and presentable, and should be completed within 2 months.
 
 ### **References**
 Pacman Game: [Pacman](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&ved=2ahUKEwiVy9nDq7WCAxVfTKQEHcjlCi8QFnoECBAQAQ&url=https%3A%2F%2Fwww.toupty.com%2Fjeupacman.html&usg=AOvVaw3lMU2cnWuQpaJqkbbFAaC9&opi=89978449)
@@ -189,5 +277,5 @@ Pacman Document: [Information](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&s
 
 ### **Glossary**
 
-[^1]: HUD In video gaming, the HUD (heads-up display) or status bar is the method by which information is visually relayed to the player as part of a game's user interface. It takes its name from the head-up displays used in modern aircraft.
+HUD In video gaming, the HUD (heads-up display) or status bar is the method by which information is visually relayed to the player as part of a game's user interface. It takes its name from the head-up displays used in modern aircraft.
 
