@@ -32,7 +32,7 @@
 ### **1. Introduction:**
 - A. Brief history of Pac-man :
 
-    Pac-Man is a game that was <ins>created by Namco and directed by Toru Iwatani.</ins> The project started in 1970s and was implemented in an arcade in 1980 with the name of <ins>“Puck Man”.</ins> Then the name of the game was changed for the one we all know nowaday when it was imported into the US, after that Pac-Man started to become popular.
+    Pac-Man is a game that was <ins>created by Namco and directed by Toru Iwatani.</ins> The project started in 1970s and was implemented in an arcade in 1980 with the name of <ins>“Puck Man”.</ins> Then the name of the game was changed for the one we all know nowaday when it was imported into the US, after that Pac-Man started to become popular and more than 100 000 units was sold. In 1981 in US it was the turn of Ms. Pac-Man which is the same that de precedent game but with a female character and an alternating maze design system. Next in 1982 is Super Pac-Man that was created in Japan and the goal was the same but with some differences because the main character has to eat keys to open doors and then eat fruits that was behind. After that, many pac-man games were created and for some of them they were re-adapted over the years.
 
     ![Alt text](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROYKgZAO-K5yrvdLq9pz355DYI8TxcM4gI5A&usqp=CAU )
 <br></br>
