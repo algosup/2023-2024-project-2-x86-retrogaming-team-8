@@ -8,10 +8,10 @@
 
 - [2023-2024 - PROJECT-2 - x86-RETROGAMING - TEAM - 8](#2023-2024---project-2---x86-retrogaming---team---8)
   - [Functional Specifications](#functional-specifications)
-    - [**1. Introduction:**](#1-introduction)
+    - [**1. Introduction**](#1-introduction)
     - [**2. Project Overview:**](#2-project-overview)
-      - [**1. Project Scope:**](#1-project-scope)
-      - [**2. Objective:**](#2-objective)
+      - [**1. Project Scope**](#1-project-scope)
+      - [**2. Objective**](#2-objective)
       - [**3. Personas & Use Case**](#3-personas--use-case)
       - [**4. Functionality**](#4-functionality)
       - [**5. Milestones**](#5-milestones)
@@ -19,7 +19,7 @@
       - [**7. Risk & Assumption**](#7-risk--assumption)
       - [**8. Non Functional**](#8-non-functional)
       - [**9. Evaluation criteria**](#9-evaluation-criteria)
-      - [**10. Conclusion**](#9-conclusion)
+      - [**10. Conclusion**](#10-conclusion)
     - [**References**](#references)
     - [**Glossary**](#glossary)
 
@@ -30,28 +30,28 @@
 
 
 ### **1. Introduction:**
-- A. Brief history of Pac-man :
+- Brief history of Pac-man:
 
-    Pac-Man is a game that was <ins>created by Namco and directed by Toru Iwatani.</ins> The project started in 1970s and was implemented in an arcade in 1980 with the name of <ins>“Puck Man”.</ins> Then the name of the game was changed for the one we all know nowaday when it was imported into the US, after that Pac-Man started to become popular and more than 100 000 units was sold. In 1981 in US it was the turn of Ms. Pac-Man which is the same that de precedent game but with a female character and an alternating maze design system. Next in 1982 is Super Pac-Man that was created in Japan and the goal was the same but with some differences because the main character has to eat keys to open doors and then eat fruits that was behind. After that, many pac-man games were created and for some of them they were re-adapted over the years.
+    Pac-Man is a game that was <ins>created by Namco and directed by Toru Iwatani.</ins> The project started in the 1970s and was implemented in an arcade in 1980 with the name of <ins>“Puck Man”.</ins> Then the name of the game was changed for the one we all know nowaday when it was imported into the US, after that Pac-Man started to become popular and more than 100 000 units was sold. In 1981 in US it was the turn of Ms. Pac-Man which is the same that de precedent game but with a feminine character and an alternating maze design system. Next in 1982 is Super Pac-Man that was created in Japan it goal was the same but with some differences because the main character has to eat keys to open doors and then eat fruits that was behind. After that, many pac-man games were created and for some of them they were re-adapted over the years.
 
     ![Alt text](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROYKgZAO-K5yrvdLq9pz355DYI8TxcM4gI5A&usqp=CAU )
 <br></br>
-- B. Description of Pac-man as a game :
+- Description of Pac-man as a game:
 
-    It can be a wrong question but we need to know “What is Pac-Man ?”. This video game is an arcade game with simple rules. We have a main character named “Pac-Man” that refer  to an image of a pizza with a slice removed and ghosts which are the enemies of the main character. Pac-Man's gameplay is centered on strategy and quick reflexes. Players must navigate the maze and avoid the ghosts, each of which has its own pursuit pattern. Then the player need to eat every little cubes without be touched by the ghosts to have an access to the next level. However there’s a specific cube that is bigger than the other, this cube allow Pac-man to attack the ghost and take them out for a short time and giving points for a better score and to have access to the next level.
+    It can be a wrong question but we need to know “What is Pac-Man ?”. This video game is an arcade game with simple rules. We have a main character named “Pac-Man” that refer  to an image of a pizza with a slice removed and ghosts who are the enemies of the main character. Pac-Man's gameplay is centered on strategy and quick reflexes. Players must navigate the maze and avoid the ghosts, each of which has its own pursuit pattern. Then the player needs eating every little cube without being touched by the ghosts to have an access to the next level. However, there’s are specific cube that is bigger than the other, this cube allow Pac-man to attack the ghost and take them out for a short time and giving points for a better score and to have access to the next level.
 
 ### **2. Project Overview:**
 
 #### **1. Project Scope:**
 We've been tasked by ALGOSUP to undertake a project that must be completed within a tight two-month deadline. The primary goal of this project is to recreate the classic game Pac-Man while paying meticulous attention to replicating its visual representation just as it appeared on its original release date, which was May 22, 1980.
 #### **2. Objective:**
-Reproduce the game pacman in assembly programming language, Keeping it old visual graphique, that is in the year it was published 1980.
+Reproduce the game pacman in assembly programming language, Keeping it old visual graphisme, that is in the year it was published 1980.
 
-- A. Replicate classic Pac-Man in x86 processor.
-- B. Enhance randomness and scores system.
-- C. Add some new features.
-- D. The program should be run and executed on DosBox.
-- E. Should be completed within 2 months.
+- Replicate classic Pac-Man in x86 processor.
+- Enhance randomness and scores system.
+- Add some new features.
+- The program should be run and executed on DosBox.
+- Should be completed within 2 months.
 
 #### **3. Personas & Use Case**
 
@@ -59,15 +59,15 @@ Reproduce the game pacman in assembly programming language, Keeping it old visua
 #### **4. Functionality**
 
 - *Better randomness*:
-  - Improve of the ghost movement algorithm and their different modes :
-    - chase → A ghost’s objective in chase mode, is to find and capture Pac-Man by hunting him
-    - scatter → In scatter mode the ghost give up the chase for a few second and head for their respective home corners. It’s a brief rest soon enough, they will revert to chase mode and be after Pac-Man again
-    - frightened → Ghosts enter frightened mode whenever Pac-Man eats one of the four energizers located in the far corners of the maze
+  - Improve of the ghost movement algorithm and their different modes:
+    - Chase → A ghost’s objective in chase mode, is to find and capture Pac-Man by hunting him.
+    - Scatter → In scatter mode the ghost give up the chase for a few second and head for their respective home corners. It’s a brief rest soon, they will revert to chase mode and be after Pac-Man again.
+    - Rightened → Ghosts enter frightened mode whenever Pac-Man eats one of the four energizers located in the far corners of the maze.
     <div align="center">
     <img src="https://wallpapers.com/images/hd/pacman-2560-x-1440-d5yj0fug2f7amq51.jpg" alt="assembly" width="200" height="150">
     </div>
 - *Adding More Mechanics*:
-  - Adding a limited 2 times score bonus.
+  - Adding a limited two times score bonus.
 
 - *Difficulties levels*:
   - Adding different difficulties levels "Easy, Normal and Hard", like harder maze for a faster gameplay.
@@ -76,7 +76,7 @@ Reproduce the game pacman in assembly programming language, Keeping it old visua
   - Calculate the score depending on the items the player takes.
 
 - *High scores*:
-  - Placing the highscore on the top of the screen during the game is part of the newly feature to be implemented in case deadlines are not meet.
+  - Placing the high score on the top of the screen during the game is part of the new feature to be implemented in case deadlines are not meeting.
 
 - *Sounds and music*:
   - Add the sound effect of the original Pacman and add remixed music addapted for the 8bit system.
@@ -133,7 +133,7 @@ Reproduce the game pacman in assembly programming language, Keeping it old visua
 
 
 -   *Identity*: 
-    - Display a text box that allow the player to put in his name, before starting the game.
+    - Display a text box that allow the player to place in his name, before starting the game.
 
 ![Alt text](https://i.guim.co.uk/img/media/8152f8ea7f06fd8ef5c68a3a594e6ac35dfd774b/0_342_800_480/master/800.jpg?width=465&dpr=1&s=none)
 
@@ -160,15 +160,15 @@ Reproduce the game pacman in assembly programming language, Keeping it old visua
   - The code will be executed and will run on DosBox.
 
 - *Menu System*:
-  - At the begining of the game a Menu option should be display, showing information like start and Option.
+  - At the beginning of the game a Menu option should be displaying, showing information like start and Option.
    
 - *HUD (Heads-Up Display)*:
-  - Information such as the player's score, lives remaining, and level number should be display on the screen during the gameplay process.
+  - Information such as the player's score, lives remaining, and level number should be displaying on the screen during the gameplay process.
 
 - *Gameplay Mechanics*:
-  - We should have have a top-down view perspective, which is 2D view.
+  - We should have a top-down view perspective, which is 2D view.
 
-²   
+
 #### **7. Risk & Assumption**
 
 **Risks:**
@@ -186,7 +186,7 @@ Reproduce the game pacman in assembly programming language, Keeping it old visua
   - We have to consider the risk of performance bottlenecks or slow gameplay on less powerful systems when running in DOSBox.
 
 - *Legal and Intellectual Property Risks*:
-  - Before publishing the game we have to consider the copyright issues related to Pac-Man's intellectual property.
+  - Before publishing the game, we have to consider the copyright issues related to Pac-Man's intellectual property.
 
 **Assumptions:**
 
@@ -204,7 +204,7 @@ Quickly outline the key components and design the structure of your assembly imp
 Swiftly set up your assembly development environment, ensuring it's ready for coding.
 
     - Game Loop, Basic Graphics and prototype (1-2 weeks):
-Prioritize implementing the core game loop and basic graphics. Focus on displaying the maze and Pac-Man and a ready prototype.
+Prioritize implementing the core game loop and basic graphics. Focus on displaying the maze and Pac-Man and completed prototype.
 
     - Input Handling and Minimal Collision (1 week):
 Implement basic input handling for Pac-Man's movement and minimal collision detection.
@@ -225,11 +225,11 @@ Wrap up the project, make sure everything works, and document your code. Prepare
 
 
 - *Emulator Assumptions*:
-  - Use the latest version of DOSBox for it new features, and latest improvement.
+  - Use the more previous version of DOSBox for it new features, and latest improvement.
 
 - *Testing Assumptions*:
   - Create test case for each function to ensure the program works properly
-  - Unit test will be conducted for individual components, such as the game loop, input handling, and collision detection.
+  - Unit test will be conducted for independent components, such as the game loop, input handling, and collision detection.
 
 - *Game Design Assumptions*:
     - The primary goal is to preserve the classic Pac-Man gameplay experience.
@@ -240,35 +240,35 @@ Wrap up the project, make sure everything works, and document your code. Prepare
 #### **8. Non Functional**
 1. Performance Requirements:
 
-    - Response Time: The input are very reactive and fast, immediately as the user initiate an action.
-    - Frame Rate: The game need a minimum frame rate of 60fps.
-    - Loading Time: The game have to be very fast when loading a short time delay during loading and game starting.
+    - Response Time: The input is very reactive and fast, immediately as the user initiate an action.
+    - Frame Rate: The game needs a minimum frame rate of 60fps.
+    - Loading Time: The game has to be very fast when loading a short time delay during loading and game starting.
 
 2. Compatibility:
 
-    - The game doesn't have any plateform or system preference, run smoothly on all system.
+    - The game doesn't have any platform or system preference, run smoothly on all system.
 
 3. Documentation:
 
-    - The functional and technical documents will be needed by developers to work out on the project.
-    - A useful user manual provided for end user to have complete detail on how the game function and how to play it.
+    - The functional and technical documents will be required by developers to work out on the project.
+    - A useful user manual provided for end user to enjoy complete detail on how the game function and how to play it.
 
 4. Performance on Low-End Systems:
     - The game should properly work on all type of system in terms of performance, whether high or low performance.
 
 #### **9. Evaluation criteria**
 - The game has to be entertaining as much as possible.
-- Evaluate the graphique visual Design and audio of the game.
+- Evaluate the graphic visual Design and audio of the game.
 - No crash detected during the gameplay session.
-- Resonnable level, No impossible level.
+- Reasonnable level, No impossible level.
 - New features added.
 - Speed of the Game.
 - All functionalities present and well presented.
-- The game have to satisfied those who are playing "User" nand the customer.
-- Robutness of the program.
+- The game has to satisfy those who are playing "User" and the customer.
+- Robustness of the program.
 
 #### **10. Conclusion**
-To conclude, the game have to be significant, entertaining, and presentable, and should be completed within 2 months.
+To conclude, the game has to be significant, entertaining, and presentable, and should be completed within 2 months.
 
 ### **References**
 Pacman Game: [Pacman](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&ved=2ahUKEwiVy9nDq7WCAxVfTKQEHcjlCi8QFnoECBAQAQ&url=https%3A%2F%2Fwww.toupty.com%2Fjeupacman.html&usg=AOvVaw3lMU2cnWuQpaJqkbbFAaC9&opi=89978449)
