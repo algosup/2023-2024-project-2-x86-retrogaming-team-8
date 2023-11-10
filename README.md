@@ -1,7 +1,7 @@
 <div align="center" style = "display: flex">
-      <img src="Documents/pacman.png" alt="PACMAN" width="70" height="70">
-       <img src="Documents/link.png" alt="link" width="50" height="50">
-      <img src="Documents/assembly.png" alt="assembly" width="80" height="75">
+      <img src="images/pacman.png" alt="PACMAN" width="70" height="70">
+       <img src="images/link.png" alt="link" width="50" height="50">
+      <img src="images/assembly.png" alt="assembly" width="80" height="75">
 </div>
 
 # 2023-2024-project-2-x86-retrogaming-team-8
@@ -10,7 +10,7 @@
 
 |<p align="center"><h3>Functional Specifications</h3>|<p align="center"><h3>Technical Specifications</h3></p>|
 |--|--|
-|<div align="center"><a href="https://github.com/algosup/2023-2024-project-2-x86-retrogaming-team-8/blob/Documents/Documents/Functional%20specifications.md"><img src="Documents/funtional.png" width = "178" height = "180"></a></p></div>|<div align="center"><a href="https://github.com/algosup/2023-2024-project-2-x86-retrogaming-team-8/blob/Documents/Documents/Technical%20specifications.md"><img src="Documents/technical.png" width ="178" height = "180"></a></div>|
+|<div align="center"><a href="https://github.com/algosup/2023-2024-project-2-x86-retrogaming-team-8/blob/Documents/Documents/Functional%20specifications.md"><img src="images/funtional.png" width = "178" height = "180"></a></p></div>|<div align="center"><a href="https://github.com/algosup/2023-2024-project-2-x86-retrogaming-team-8/blob/Documents/Documents/Technical%20specifications.md"><img src="images/technical.png" width ="178" height = "180"></a></div>|
 
 </div>
 
