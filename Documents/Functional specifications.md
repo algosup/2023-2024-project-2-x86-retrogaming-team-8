@@ -9,7 +9,7 @@
 - [2023-2024 - PROJECT-2 - x86-RETROGAMING - TEAM - 8](#2023-2024---project-2---x86-retrogaming---team---8)
   - [Functional Specifications](#functional-specifications)
     - [**1. Introduction**](#1-introduction)
-    - [**2. Project Overview:**](#2-project-overview)
+    - [**2. Project Overview**](#2-project-overview)
       - [**1. Project Scope**](#1-project-scope)
       - [**2. Objective**](#2-objective)
       - [**3. Personas & Use Case**](#3-personas--use-case)
@@ -30,21 +30,21 @@
 
 
 ### **1. Introduction:**
-- Brief history of Pac-man:
+- **Brief history of Pac-man:**
 
     Pac-Man is a game that was <ins>created by Namco and directed by Toru Iwatani.</ins> The project started in the 1970s and was implemented in an arcade in 1980 with the name of <ins>“Puck Man”.</ins> Then the name of the game was changed for the one we all know nowaday when it was imported into the US, after that Pac-Man started to become popular and more than 100 000 units was sold. In 1981 in US it was the turn of Ms. Pac-Man which is the same that de precedent game but with a feminine character and an alternating maze design system. Next in 1982 is Super Pac-Man that was created in Japan it goal was the same but with some differences because the main character has to eat keys to open doors and then eat fruits that was behind. After that, many pac-man games were created and for some of them they were re-adapted over the years.
 
     ![Alt text](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROYKgZAO-K5yrvdLq9pz355DYI8TxcM4gI5A&usqp=CAU )
 <br></br>
-- Description of Pac-man as a game:
+- **Description of Pac-man as a game:**
 
     It can be a wrong question but we need to know “What is Pac-Man ?”. This video game is an arcade game with simple rules. We have a main character named “Pac-Man” that refer  to an image of a pizza with a slice removed and ghosts who are the enemies of the main character. Pac-Man's gameplay is centered on strategy and quick reflexes. Players must navigate the maze and avoid the ghosts, each of which has its own pursuit pattern. Then the player needs eating every little cube without being touched by the ghosts to have an access to the next level. However, there’s are specific cube that is bigger than the other, this cube allow Pac-man to attack the ghost and take them out for a short time and giving points for a better score and to have access to the next level.
 
-### **2. Project Overview:**
+### **2. Project Overview**
 
-#### **1. Project Scope:**
+- **1. Project Scope:**
 We've been tasked by ALGOSUP to undertake a project that must be completed within a tight two-month deadline. The primary goal of this project is to recreate the classic game Pac-Man while paying meticulous attention to replicating its visual representation just as it appeared on its original release date, which was May 22, 1980.
-#### **2. Objective:**
+- **2. Objective:**
 Reproduce the game pacman in assembly programming language, Keeping it old visual graphisme, that is in the year it was published 1980.
 
 - Replicate classic Pac-Man in x86 processor.
