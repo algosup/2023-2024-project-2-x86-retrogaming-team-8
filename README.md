@@ -1,7 +1,7 @@
 <div align="center" style = "display: flex">
-      <img src="pacman.png" alt="PACMAN" width="70" height="70">
-       <img src="link.png" alt="link" width="50" height="50">
-      <img src="assembly.png" alt="assembly" width="80" height="75">
+      <img src="Documents/pacman.png" alt="PACMAN" width="70" height="70">
+       <img src="Documents/link.png" alt="link" width="50" height="50">
+      <img src="Documents/assembly.png" alt="assembly" width="80" height="75">
 </div>
 
 # 2023-2024-project-2-x86-retrogaming-team-8
@@ -10,7 +10,7 @@
 
 |<p align="center"><h3>Functional Specifications</h3>|<p align="center"><h3>Technical Specifications</h3></p>|
 |--|--|
-|<div align="center"><a href="https://github.com/algosup/2023-2024-project-2-x86-retrogaming-team-8/blob/Documents/Documents/Functional%20specifications.md"><img src="funtional.png" width = "178" height = "180"></a></p></div>|<div align="center"><a href="https://github.com/algosup/2023-2024-project-2-x86-retrogaming-team-8/blob/Documents/Documents/Technical%20specifications.md"><img src="technical.png" width ="178" height = "180"></a></div>|
+|<div align="center"><a href="https://github.com/algosup/2023-2024-project-2-x86-retrogaming-team-8/blob/Documents/Documents/Functional%20specifications.md"><img src="Documents/funtional.png" width = "178" height = "180"></a></p></div>|<div align="center"><a href="https://github.com/algosup/2023-2024-project-2-x86-retrogaming-team-8/blob/Documents/Documents/Technical%20specifications.md"><img src="Documents/technical.png" width ="178" height = "180"></a></div>|
 
 </div>
 
@@ -18,16 +18,16 @@
 
 
 ## Description
-  Named as x86-retrogaming, the goal of the project is to Reproduce the game pacman, and add some new features if possible, but keeping the concept of it visualisation exactly like it was during it publish "1970s" 
+  Named as x86-retrogaming, the goal of the project is to Reproduce the game pacman, and add some new features if possible, but keeping the concept of it visualisation exactly like it was during it publish "1970s".
 
 ## Installation
 For this project we have to us dos-bot to emulate a particular system processor that is x86 Architecture, This will help us to run the assembly code on, as the code shall be done in different interface.
 
 ## Features
-  1.  Recreate the game pacman in Assembly programming Language
-  2.  The game most visualy look like that of the year it was published "1970s"
-  3.  The program must be run in dos-bot
-  4.  Some newly features can be added on the game  
+  1.  Recreate the game pacman in Assembly programming Language.
+  2.  The game most visualy look like that of the year it was published "1970s".
+  3.  The program must be run in dos-bot.
+  4.  Some newly features can be added on the game.
 
 ## Contributors
 ### Management
