@@ -44,11 +44,7 @@ For this project we have to us dos-bot to emulate a particular system processor 
 
 | Avatar | Name | Role |
 | :---: | :---: | :---: |
-<<<<<<< Updated upstream
-| <img src="https://avatars.githubusercontent.com/u/1223690544?v=4" alt="AtifaAMIRI" width="140" align="center"> | [**AtifaAMIRI**]() | Program Manager|
-=======
-| <img src="https://avatars.githubusercontent.com/u/150429809?v=4" alt="AtifaAMIRI" width="140" align="center"> | [**Atifa AMIRI**](https://github.com/Atifabaran) | Program Manager|
->>>>>>> Stashed changes
+|<img src="https://avatars.githubusercontent.com/u/150429809?v=4" alt="AtifaAMIRI" width="140" align="center"> | [**Atifa AMIRI**](https://github.com/Atifabaran) | Program Manager|
 | <img src="https://avatars.githubusercontent.com/u/122369054?v=4" alt="Bistrel2002" width="140" align="center"> | [**Tsangue Bistrel**](https://github.com/Bistrel2002) | Technical Lead |
 
 </div>
