@@ -53,6 +53,74 @@ Reproduce the game pacman in assembly programming language, Keeping it old visua
 
 #### **3. Personas & Use Case**
 
+![Alt text](../../Images/Philippebourseillerfixed.jpg)
+
+![Alt text](../../Images/Lisaescofferfixed.jpg)
+
+![Alt text](../../Images/Ethanbergerfixed.jpg)
+
+##### Use Case:
+##### Title: Play Pac-Man Game
+
+##### Actors: Player
+
+##### Goals:
+- Moving Pac-Man through the maze.
+- Eat the food to score points.
+- Run away from ghosts to stay alive.
+- Clear the entire maze.
+
+##### Main Success Scenario:
+
+###### Initiation:
+The player launch Pac-Man.
+
+###### Maze Setup:
+The program loads the game maze with foods and ghosts.
+
+Pac-Man appears in a precise starting position.
+
+###### Player Movement:
+The player uses arrow keys to move Pac-Man with the following functions : up, down, left, or right.
+
+Pac-Man's position is updated accordingly.
+
+###### Eat Foods:
+As Pac-Man moves, it consumes pellets in its path.
+Each pellet eaten contributes to the player's score.
+
+###### Avoid Ghosts:
+The player must move Pac-Man everytime to avoid contact with ghosts.
+If Pac-Man collides with a ghost, the player loses a life.
+
+###### Power Pellets:
+When Pac-Man eats a power pellet, the ghosts turn blue. That indicate their vulnerability for a short time.
+Pac-Man can now eat the vulnerable ghosts for additional points.
+
+###### Clearing the Maze:
+The player continues navigating Pac-Man through the maze, eating foods, and avoiding ghosts.
+The game level is considered complete when all the food is consumed.
+
+###### Level Completion:
+If the player clears the entire maze, they will be redirected to the next level.
+The system resets the maze, increases the game difficulty, and awards bonus points.
+
+###### Game Over:
+If Pac-Man loses all lives (due to ghost collisions), the game ends.
+The system displays the player's final score and offers an option to restart or exit the game.
+
+###### Score:
+- Every 10 000 points the player earn an extra life
+
+###### Preconditions:
+- The game software is properly installed and functioning.
+- The player has launched the Pac-Man game.
+
+###### Postconditions:
+- The player has completed a game level and earned points.
+- The game is ready for the next level or has ended with the player's final score displayed.
+
+
 
 #### **4. Functionality**
 
