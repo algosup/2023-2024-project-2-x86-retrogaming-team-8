@@ -8,15 +8,13 @@
 
 - [2023-2024 - PROJECT-2 - x86-RETROGAMING - TEAM - 8](#2023-2024---project-2---x86-retrogaming---team---8)
   - [Functional Specifications](#functional-specifications)
-    - [**1. Introduction**](#1-introduction)
+    - [**1. Introduction:**](#1-introduction)
     - [**2. Project Overview**](#2-project-overview)
-      - [**1. Project Scope**](#1-project-scope)
-      - [**2. Objective**](#2-objective)
-      - [**3. Personas & Use Case**](#3-personas--use-case)
+      - [**3. Personas \& Use Case**](#3-personas--use-case)
       - [**4. Functionality**](#4-functionality)
       - [**5. Milestones**](#5-milestones)
       - [**6. Interfaces**](#6-interfaces)
-      - [**7. Risk & Assumption**](#7-risk--assumption)
+      - [**7. Risk \& Assumption**](#7-risk--assumption)
       - [**8. Non Functional**](#8-non-functional)
       - [**9. Evaluation criteria**](#9-evaluation-criteria)
       - [**10. Conclusion**](#10-conclusion)
@@ -45,7 +43,7 @@
 - **1. Project Scope:**
 We've been tasked by ALGOSUP to undertake a project that must be completed within a tight two-month deadline. The primary goal of this project is to recreate the classic game Pac-Man while paying meticulous attention to replicating its visual representation just as it appeared on its original release date, which was May 22, 1980.
 - **2. Objective:**
-Reproduce the game pacman in assembly programming language, Keeping it old visual graphisme, that is in the year it was published 1980.
+Reproduce the game pacman in assembly programming language, Keeping it old visual graphics, that is in the year it was published 1980.
 
 - Replicate classic Pac-Man in x86 processor.
 - Enhance randomness and scores system.
