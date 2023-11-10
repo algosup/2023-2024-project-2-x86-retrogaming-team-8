@@ -279,3 +279,4 @@ Pacman Document: [Information](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&s
 
 HUD In video gaming, the HUD (heads-up display) or status bar is the method by which information is visually relayed to the player as part of a game's user interface. It takes its name from the head-up displays used in modern aircraft.
 
+Fruits: There qre different types of fruits in pac-man.
