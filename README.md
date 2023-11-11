@@ -10,7 +10,7 @@
 
 |<p align="center"><h3>Functional Specifications</h3>|<p align="center"><h3>Technical Specifications</h3></p>|
 |--|--|
-|<div align="center"><a href="https://github.com/algosup/2023-2024-project-2-x86-retrogaming-team-8/blob/Documents/Documents/Functional%20specifications.md"><img src="images/funtional.png" width = "178" height = "180"></a></p></div>|<div align="center"><a href="https://github.com/algosup/2023-2024-project-2-x86-retrogaming-team-8/blob/Documents/Documents/Technical%20specifications.md"><img src="images/technical.png" width ="178" height = "180"></a></div>|
+|<div align="center"><a href="https://github.com/algosup/2023-2024-project-2-x86-retrogaming-team-8/blob/Documents/Documents/Specifications/Functional%20specifications.md"><img src="images/funtional.png" width = "178" height = "180"></a></p></div>|<div align="center"><a href="https://github.com/algosup/2023-2024-project-2-x86-retrogaming-team-8/blob/Documents/Documents/Specifications/Technical%20specification.md"><img src="images/technical.png" width ="178" height = "180"></a></div>|
 
 </div>
 
