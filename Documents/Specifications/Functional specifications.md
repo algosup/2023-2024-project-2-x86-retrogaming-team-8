@@ -5,37 +5,25 @@
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 <details>
-<summary>📖 Table of content</summary>
+<summary>📖 Table of Content</summary>
 
 - [2023-2024 - PROJECT-2 - x86-RETROGAMING - TEAM - 8](#2023-2024---project-2---x86-retrogaming---team---8)
   - [Functional Specifications](#functional-specifications)
-    - [**1. Introduction:**](#1-introduction)
-    - [**2. Project Overview**](#2-project-overview)
-      - [**3. Personas \& Use Case**](#3-personas--use-case)
-        - [Use Case](#use-case)
-        - [Title: Play Pac-Man Game](#title-play-pac-man-game)
-        - [Actors: Player](#actors-player)
-        - [Goals](#goals)
-        - [Main Success Scenario](#main-success-scenario)
-          - [Initiation](#initiation)
-          - [Maze Setup](#maze-setup)
-          - [Player Movement](#player-movement)
-          - [Eat Foods](#eat-foods)
-          - [Avoid Ghosts](#avoid-ghosts)
-          - [Power Pellets](#power-pellets)
-          - [Clearing the Maze](#clearing-the-maze)
-          - [Level Completion](#level-completion)
-          - [Game Over](#game-over)
-          - [Score](#score)
-          - [Preconditions](#preconditions)
-          - [Post-conditions](#post-conditions)
-      - [**4. Functionality**](#4-functionality)
-      - [**5. Milestones**](#5-milestones)
-      - [**6. Interfaces**](#6-interfaces)
-      - [**7. Risk \& Assumption**](#7-risk--assumption)
-      - [**8. Non-Functional**](#8-non-functional)
-      - [**9. Evaluation Criteria**](#9-evaluation-criteria)
-      - [**10. Conclusion**](#10-conclusion)
+  - [**1. Introduction:**](#1-introduction)
+  - [**2. Project Overview**](#2-project-overview)
+  - [**3. Personas \& Use Case**](#3-personas--use-case)
+    - [Use Cases](#use-cases)
+      - [Use Case 1: Initiate Pac-Man Game](#use-case-1-initiate-pac-man-game)
+      - [Use Case 2: Navigate Pac-Man Through the Maze](#use-case-2-navigate-pac-man-through-the-maze)
+      - [Use Case 3: End Pac-Man Game](#use-case-3-end-pac-man-game)
+    - [**4. Functionalities**](#4-functionalities)
+      - [Gameplay Mechanics](#gameplay-mechanics)
+    - [**5. Nice to have**](#5-nice-to-have)
+    - [**6. Milestones**](#6-milestones)
+    - [**7. Interfaces**](#7-interfaces)
+    - [**8. Risk \& Assumption**](#8-risk--assumption)
+    - [**9. Non-Functional**](#9-non-functional)
+    - [**10. Evaluation Criteria**](#10-evaluation-criteria)
     - [**References**](#references)
     - [**Glossary**](#glossary)
 
@@ -43,32 +31,30 @@
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
-### **1. Introduction:**
+## **1. Introduction:**
 
 - **Brief history of Pac-Man:**
 
-    Pac-Man is a game that was **created by Namco and directed by Toru Iwatani.** The project started in the 1970s and was implemented in an arcade in 1980 with the name of **“Puck Man”.** Then the name of the game was changed to the one we all know nowadays when it was imported into the US. After that, Pac-Man started to become popular, and more than 100,000 units were sold. In 1981 in the US, it was the turn of Ms. Pac-Man, which is the same as the preceding game but with a feminine character and an alternating maze design system. Next, in 1982, is Super Pac-Man that was created in Japan. Its goal was the same, but with some differences because the main character has to eat keys to open doors and then eat fruits that were behind. After that, many Pac-Man games were created, and for some of them, they were re-adapted over the years.
+  Pac-Man is a game that was **created by Namco and directed by Toru Iwatani.** The project started in the 1970s and was implemented in an arcade in 1980 with the name of **“Puck Man”.** Then the name of the game was changed to the one we all know nowadays when it was imported into the US. After that, Pac-Man started to become popular, and more than 100,000 units were sold. In 1981 in the US, it was the turn of Ms. Pac-Man, which is the same as the preceding game but with a feminine character and an alternating maze design system. Next, in 1982, Super Pac-Man was created in Japan. Its goal was the same, but with some differences because the main character has to eat keys to open doors and then eat fruits that were behind compared to the original one. After that, many Pac-Man games were created, and some of them were re-adapted over the years.
 
-    ![Alt text](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROYKgZAO-K5yrvdLq9pz355DYI8TxcM4gI5A&usqp=CAU)
+  ![Alt text](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROYKgZAO-K5yrvdLq9pz355DYI8TxcM4gI5A&usqp=CAU)
 
-- **Description of Pac-man as a game:**
+- **Description of Pac-Man as a game:**
 
-  It can be a wrong question, but we need to know, “What is Pac-Man?” This video game is an arcade game with simple rules. We have a main character named “Pac-Man” that refers to an image of a pizza with a slice removed and ghosts who are the enemies of the main character. Pac-Man's gameplay is centered on strategy and quick reflexes. Players must navigate the maze and avoid the ghosts, each of which has its pursuit pattern. Then the player needs to eat every little cube without being touched by the ghosts to have access to the next level. However, there are specific cubes that are bigger than the others; these cubes allow Pac-man to attack the ghost and take them out for a short time, giving points for a better score and to have access to the next level.
+  What is Pac-Man? This video game is an arcade game with simple rules. We have a main character named “Pac-Man” that refers to an image of a pizza with a slice removed and ghosts who are the enemies of the main character. Pac-Man's gameplay is centered on strategy and quick reflexes. Players must navigate the maze and avoid the ghosts, each of which has its pursuit pattern. Then the player needs to eat every pellet on the maze without being touched by the ghosts to complete the level. However, there are specific pellets known as Power Pellets they have a distinct trait which is being bigger than the others; these pellets allow Pac-Man to attack the ghosts and take them out for a short time, giving points for a better score.
 
-### **2. Project Overview**
+## **2. Project Overview**
 
 - **1. Project Scope:**
-  We've been tasked by ALGOSUP to undertake a project that must be completed within a tight two-month deadline. The primary goal of this project is to recreate the classic game Pac-Man while paying meticulous attention to replicating its visual representation just as it appeared on its original release date, which was May 22, 1980.
+  We've been tasked by ALGOSUP to undertake a project that must be completed within a tight 7 week deadline. The primary goal of this project is to recreate the classic game Pac-Man by replicating its visual representation just as it appeared on its original release date, which was May 22, 1980.
 - **2. Objective:**
-  Reproduce the game Pac-man in assembly programming language, Keeping its old visual graphics, that is in the year it was published 1980.
+  The main objective of the project is to reproduce the game Pac-Man in assembly programming language, Keeping its old visual graphics, which were the graphics it had in 1980.
 
 - Replicate classic Pac-Man in x86 processor.
-- Enhance randomness and the score system.
-- Add some new features.
 - The program should run and execute on DosBox.
-- Should be completed within 2 months.
+- Should be completed within 7 weeks.
 
-#### **3. Personas & Use Case**
+## **3. Personas & Use Case**
 
 ![Alt text](../../Images/Philippebourseillerfixed.jpg)
 
@@ -76,82 +62,191 @@
 
 ![Alt text](../../Images/Ethanbergerfixed.jpg)
 
-##### Use Case
+### Use Cases
 
-##### Title: Play Pac-Man Game
+#### Use Case 1: Initiate Pac-Man Game
 
-##### Actors: Player
+**Actors:** Player
 
-##### Goals
+**Goals:**
 
-- Moving Pac-Man through the maze.
-- Eat the food to score points.
+- Launch the Pac-Man game.
+
+**Main Success Scenario:**
+
+1. The player launches the Pac-Man game.
+2. The game initializes, showing the main menu.
+3. The player starts a new game.
+4. The initial level is loaded with Pac-Man, ghosts, and maze.
+5. The gameplay begins, and the player controls Pac-Man.
+
+**Preconditions:**
+
+- The game software is properly installed and functioning.
+
+**Exit Condition:**
+
+- The game is in a playable state with the player controlling Pac-Man.
+
+#### Use Case 2: Navigate Pac-Man Through the Maze
+
+**Actors:** Player
+
+**Goals:**
+
+- Move Pac-Man through the maze.
+- Eat the fruits to score points.
 - Run away from ghosts to stay alive.
 - Clear the entire maze.
 
-##### Main Success Scenario
+**Main Success Scenario:**
 
-###### Initiation
+1. The player presses the start button to begin the game.
+2. The game initializes and loads the level.
+3. Pac-Man appears in a precise starting position.
+4. The player uses arrow keys to move Pac-Man with the following functions: up, down, left, or right.
+5. Pac-Man's position is updated accordingly.
+6. As Pac-Man moves, it consumes pellets in its path.
+7. Each pellet eaten contributes to the player's score.
+8. The player must move Pac-Man every time to avoid contact with ghosts.
+9. If Pac-Man collides with a ghost, the player loses a life.
+10. When Pac-Man eats a power pellet, the ghosts turn blue, indicating their vulnerability for a short time.
+11. Pac-Man can now eat the vulnerable ghosts for additional points.
+12. The player continues navigating Pac-Man through the maze, eating fruits, and avoiding ghosts.
+13. The game level is considered complete when all the fruit is consumed.
 
-The player launches Pac-Man.
-
-###### Maze Setup
-
-The program loads the game maze with foods and ghosts.
-
-Pac-Man appears in a precise starting position.
-
-###### Player Movement
-
-The player uses arrow keys to move Pac-Man with the following functions: up, down, left, or right.
-
-Pac-Man's position is updated accordingly.
-
-###### Eat Foods
-
-As Pac-Man moves, it consumes pellets in its path.
-Each pellet eaten contributes to the player's score.
-
-###### Avoid Ghosts
-
-The player must move Pac-Man every time to avoid contact with ghosts.
-If Pac-Man collides with a ghost, the player loses a life.
-
-###### Power Pellets
-
-When Pac-Man eats a power pellet, the ghosts turn blue. That indicates their vulnerability for a short time.
-Pac-Man can now eat the vulnerable ghosts for additional points.
-
-###### Clearing the Maze
-
-The player continues navigating Pac-Man through the maze, eating foods, and avoiding ghosts.
-The game level is considered complete when all the food is consumed.
-
-###### Level Completion
-
-If the player clears the entire maze, they will be redirected to the next level.
-The system resets the maze, increases the game difficulty, and awards bonus points.
-
-###### Game Over
-
-If Pac-Man loses all lives (due to ghost collisions), the game ends.
-The system displays the player's final score and offers an option to restart or exit the game.
-
-###### Score
+**Score:**
 
 - Every 10,000 points, the player earns an extra life.
 
-###### Preconditions
+**Preconditions:**
 
-- The game software is properly installed and functioning.
-- The player has launched the Pac-Man game.
+- The player has initiated the Pac-Man game.
 
-###### Post-conditions
+**Exit Condition:**
+
+- The player has completed a game level, earned points, and the game is ready for the next level or has ended with the player's final score displayed.
+
+---
+
+#### Use Case 3: End Pac-Man Game
+
+**Actors:** Player
+
+**Goals:**
+
+- End the Pac-Man game.
+
+**Main Success Scenario:**
+
+1. If Pac-Man loses all lives (due to ghost collisions), the game ends.
+2. The system displays the player's final score.
+3. The system offers an option to restart or exit the game.
+
+**Preconditions:**
 
 - The player has completed a game level and earned points.
-- The game is ready for the next level or has ended with the player's final score displayed.
 
-#### **4. Functionality**
+**Exit Condition:**
+
+- The player has chosen to restart or exit the game.
+
+### **4. Functionalities**
+
+#### Gameplay Mechanics
+
+- **Basic Gameplay:**
+
+  - Navigate Pac-Man through a maze using the four directional keys, eating pellets while avoiding four ghosts:
+    - **Blinky (Red)**
+    - **Pinky (Pink)**
+    - **Inky (Light Blue)**
+    - **Clyde (Orange)**
+    <p align="center"><img src="https://thereader.mitpress.mit.edu/wp-content/uploads/2020/11/pacman-lead-graphic.jpg" alt="Pac-Man Gameplay" width="400"></p>
+
+- **Pellet Collection:**
+
+  - Clear the maze of 244 pellets, including 240 small pellets worth 10 points each and four large, flashing power pellets worth 50 points each.
+  <p align="center"><img src="https://pbs.twimg.com/media/D2NUyD6VAAAI5pl.jpg" alt="Pellet Collection" width="400"></p>
+
+- **Score Boosters:**
+
+  - Increase your score by turning ghosts vulnerable with power pellets, earning points for each ghost eaten, and collecting bonus symbols (fruits or collectibles).
+
+- **Fruits and Collectibles:**
+
+  - In addition to pellets and power pellets, various fruits and collectibles appear in the maze, providing bonus points:
+    - **Cherry:** 100 points
+    - **Strawberry:** 300 points
+    - **Orange:** 500 points
+    - **Apple:** 700 points
+    - **Melon:** 1000 points
+    - **Galaxian Spaceship:** 2000 points
+    - **Bell:** 3000 points
+    - **Key:** 5000 points
+    <p align="center"><img src="https://static.wikia.nocookie.net/pacman/images/2/25/Fruits_Points.png/revision/latest/scale-to-width-down/256?cb=20210921001546" alt="Fruits and Collectibles" width="400"></p>
+
+- **Ghosts' Behavior:**
+
+  - Ghosts switch between chase, scatter, and frightened modes. Each ghost exhibits unique behavior during the chase.
+    - **Blinky (Red):** Aggressive and hard to shake once behind you.
+    - **Pinky (Pink):** Prefers getting in front of Pac-Man and cutting him off.
+    - **Inky (Light Blue):** Unpredictable and the least foreseeable in their actions.
+    - **Clyde (Orange):** Often seems to do his own thing and stays out of the way.
+    <p align="center"><img src="https://wallpapers.com/images/hd/pacman-2560-x-1440-d5yj0fug2f7amq51.jpg" alt="Ghosts' Behavior" width="400"></p>
+
+- **Mode Alternation:**
+
+  - Ghosts alternate between chase and scatter modes at predetermined intervals. Players can use scatter periods to clear pellets from dangerous areas.
+
+- **Frightened Mode:**
+
+  - Pac-Man can turn the tables by consuming power pellets, making ghosts vulnerable and earning extra points. Frightened ghosts wander aimlessly, flashing before returning to normal.
+  <p align="center"><img src="https://i0.wp.com/perfectpacman.com/wp-content/uploads/2022/11/Patterns-07-Frightened-mode.png?resize=403%2C204&ssl=1" alt="Frightened Mode" width="400"></p>
+
+- **Speed Dynamics:**
+
+  - Pac-Man's speed changes based on levels and actions. Ghosts' speed is influenced by tunnels, frightened mode, and game progression.
+
+- **Cornering Technique:**
+
+  - The cornering technique is used to navigate turns faster than ghosts, gaining an advantage for survival in higher levels.
+
+- **Ghost House Dynamics:**
+
+  - The ghost house, or monster pen, is a safe zone for ghosts. The Ghosts will reappear from this zone during the game if they are eaten in frightened mode.
+
+- _Sounds and music_:
+
+  - Add the sound effect of the original Pac-Man and add remixed music adapted for the 8-bit system.
+  - **Intro Sound:**
+
+    - [Intro.mp3](../Specifications/sound_files/Intro.mp3) - The sound effect for the original Pac-Man intro.
+
+  - **Ghost Sound:**
+
+    - [Ghost.mp3](../Specifications/sound_files/Ghost.mp3) - The iconic sound when encountering ghosts.
+
+  - **Fruit Sound:**
+
+    - [Fruit.mp3](../Specifications/sound_files/Fruit.mp3) - The sound of collecting fruits.
+
+  - **Extra Sound:**
+
+    - [Extra.mp3](../Specifications/sound_files/Extra.mp3) - The sound indicating an extra life.
+
+  - **Death Sound:**
+
+    - [Death.mp3](../Specifications/sound_files/Death.mp3) - The dramatic sound of Pac-Man's demise.
+
+  - **Cutscene Sound:**
+
+    - [Cutscene.mp3](../Specifications/sound_files/Cutscene.mp3) - The sound associated with in-game cutscenes.
+
+  - **Chomp Sound:**
+    - [Chomp.mp3](../Specifications/sound_files/Chomp.mp3) - The satisfying chomping sound.
+
+### **5. Nice to have**
 
 - _Better randomness_:
 
@@ -181,65 +276,7 @@ The system displays the player's final score and offers an option to restart or 
 
   - Placing the high score on the top of the screen during the game is part of the new feature to be implemented in case deadlines are not meeting.
 
-- _Sounds and music_:
-
-  - Add the sound effect of the original Pac-man and add remixed music adapted for the 8-bit system.
-
-  <figure>
-    <audio controls>
-      <source src="../Specifications/sound_files/Intro.mp3" type="audio/mp3">
-    </audio>
-    <figcaption>Click play to hear the sound "Intro".</figcaption>
-  </figure>
-
-  <figure>
-    <audio controls>
-      <source src="../Specifications/sound_files/Ghost.mp3" type="audio/mp3">
-    </audio>
-    <figcaption>Click play to hear the sound "Ghost".</figcaption>
-  </figure>
-
-  <figure>
-    <audio controls>
-      <source src="../Specifications/sound_files/Fruit.mp3" type="audio/mp3">
-    </audio>
-    <figcaption>Click play to hear the sound "Fruit".</figcaption>
-  </figure>
-
-  <figure>
-    <audio controls>
-      <source src="../Specifications/sound_files/Extra.mp3" type="audio/mp3">
-    </audio>
-    <figcaption>Click play to hear the sound "Extra".</figcaption>
-  </figure>
-
-  <figure>
-    <audio controls>
-      <source src="../Specifications/sound_files/Death.mp3" type="audio/mp3">
-    </audio>
-    <figcaption>Click play to hear the sound "Death".</figcaption>
-  </figure>
-
-  <figure>
-    <audio controls>
-      <source src="../Specifications/sound_files/Cutscene.mp3" type="audio/mp3">
-    </audio>
-    <figcaption>Click play to hear the sound "Cutscene".</figcaption>
-  </figure>
-
-  <figure>
-    <audio controls>
-      <source src="../Specifications/sound_files/Chomp.mp3" type="audio/mp3">
-    </audio>
-    <figcaption>Click play to hear the sound "Chomp".</figcaption>
-  </figure>
-
-- _Identity_:
-  - Display a text box that allows the player to input their name before starting the game.
-
-![Alt text](https://i.guim.co.uk/img/media/8152f8ea7f06fd8ef5c68a3a594e6ac35dfd774b/0_342_800_480/master/800.jpg?width=465&dpr=1&s=none)
-
-#### **5. Milestones**
+### **6. Milestones**
 
 - Deadlines:
 
@@ -255,146 +292,139 @@ The system displays the player's final score and offers an option to restart or 
 
 </div>
 
-#### **6. Interfaces**
+### **7. Interfaces**
 
-- _Graphical User Interface (GUI)_:
+- **Graphical User Interface (GUI):**
 
-  - The code will be executed and will run on DosBox.
+  - The GUI encompasses various elements to enhance the player's experience.
 
-- _Menu System_:
+  - **Menu System:**
 
-  - At the beginning of the game, a Menu option should be displaying, showing information like start and Option.
+    - Displays options such as start and settings at the beginning of the game.
 
-- _HUD (Heads-Up Display)_:
+  - **HUD (Heads-Up Display):**
+    - During gameplay, important information like the player's score, remaining lives, and level number is presented on-screen.
 
-  - Information such as the player's score, lives remaining, and level number should be displaying on the screen during the gameplay process.
+- **Gameplay Mechanics:**
+  - The game adopts a top-down, 2D perspective to provide a comprehensive view of the action.
 
-- _Gameplay Mechanics_:
-  - We should have a top-down view perspective, which is a 2D view.
-
-#### **7. Risk & Assumption**
+### **8. Risk & Assumption**
 
 **Risks:**
 
-- _Technical Risks_:
+- **Technical Risks:**
 
-  - Some potential technical challenges related to x86 assembly programming and DOSBox compatibility. For example, difficulties in optimizing performance or handling low-level hardware interactions.
+  - Potential challenges in x86 assembly programming and ensuring compatibility with DOSBox.
+    - Examples include difficulties in optimizing performance or managing low-level hardware interactions.
 
-- _Scope Risks_:
+- **Scope Risks:**
 
-  - The risk of feature creep, where additional features or requirements may be introduced during the project, potentially affecting the project's timeline.
+  - Risk of feature creep, with the introduction of additional features impacting the project timeline.
 
-- _Testing Risks_:
+- **Testing Risks:**
 
-  - Potential challenges in testing the game, especially in an emulator environment, and the need for thorough quality assurance.
+  - Challenges in testing the game, particularly in an emulator environment, necessitating thorough quality assurance.
 
-- _Performance Risks_:
+- **Performance Risks:**
 
-  - We have to consider the risk of performance bottlenecks or slow gameplay on less powerful systems when running in DOSBox.
+  - Consideration of the risk of performance bottlenecks or slow gameplay on less powerful systems when running in DOSBox.
 
-- _Legal and Intellectual Property Risks_:
-  - Before publishing the game, we have to consider the copyright issues related to Pac-Man's intellectual property.
+- **Legal and Intellectual Property Risks:**
+  - Evaluation of copyright issues related to Pac-Man's intellectual property before publishing the game.
 
 **Assumptions:**
 
-- _Hardware and Software Assumptions_:
+- **Hardware and Software Assumptions:**
 
-  - We will create a Package that contains all necessary files that will be needed to run the game in DOSBox no matter the system.
+  - Creation of a package containing all necessary files to run the game in DOSBox, ensuring system independence.
 
-- _Project Timeline Assumptions_:
+- **Resource Assumptions:**
 
-  - Understanding the Assembly programming language (1 week):
-    Spend focused time studying the programming language and understand how it works, more precisely x86 processor.
+  - Utilization of project planning tools such as Notion for outlining project scope and tasks.
+  - Deployment of collaboration tools such as Slack for effective communication and resource sharing.
+  - Acquisition of simple sound effects for game events.
+  - Reference to online documentation and assembly language tutorials.
 
-  - Planning and Design (1 week):
-    Quickly outline the key components and design the structure of your assembly implementation.
+- **Emulator Assumptions:**
 
-  - Setting Up Development Environment (1 week):
-    Swiftly set up your assembly development environment, ensuring it's ready for coding.
+  - Utilization of the latest version of DOSBox for its features and improvements.
 
-  - Game Loop, Basic Graphics and prototype (1-2 weeks):
-    Prioritize implementing the core game loop and basic graphics. Focus on displaying the maze and Pac-Man and completed prototype.
+- **Testing Assumptions:**
 
-  - Input Handling and Minimal Collision (1 week):
-    Implement basic input handling for Pac-Man's movement and minimal collision detection.
+  - Creation of test cases for each function.
+  - Conducting unit tests for independent components, including the game loop, input handling, and collision detection.
 
-  - Testing and Debugging (1 week):
-    Start testing early and debug as you go. Identify major issues and fix them promptly.
+- **Game Design Assumptions:**
+  - Preservation of the classic Pac-Man gameplay experience.
+  - Focus on a single-player experience, excluding multiplayer features.
+  - Restriction of player input to keyboard controls for development simplicity.
+  - Implementation of a straightforward scoring system without complex mechanics.
 
-  - Finalization and Documentation (1 week):
-    Wrap up the project, make sure everything works, and document your code. Prepare a simple readme file.
+### **9. Non-Functional**
 
-- _Resource Assumptions_:
-  - Use project planning tools or documents to outline your project's scope and tasks.
-  - Consider using collaboration tools for communication and sharing resources.
-  - Find or create simple sound effects for eating pellets, movement, and other game events.
-  - Online documentation: Access relevant documentation for your chosen assembly language.
-  - Assembly language tutorials: Utilize tutorials and guides to enhance your understanding.
-  - Choose a suitable assembly language and set up the necessary tools for coding (NASM for x86 assembly).
-- _Emulator Assumptions_:
+1. **Performance Requirements:**
 
-  - Use the more previous version of DOSBox for its new features and latest improvement.
+   - **Response Time:** The input should have a maximum response time of 50 milliseconds.
+   - **Frame Rate:** The game should maintain a minimum frame rate of 60fps.
+   - **Loading Time:** The game must load within 5 seconds, with a short time delay during loading and game starting.
 
-- _Testing Assumptions_:
+2. **Compatibility:**
 
-  - Create test cases for each function to ensure the program works properly.
-  - Unit tests will be conducted for
+   - The game is designed to run seamlessly on all major operating systems without any platform or system preference.
 
-- **Testing Assumptions**:
+3. **Documentation:**
 
-  - Create a test case for each function to ensure the program works properly.
-  - Unit tests will be conducted for independent components, such as the game loop, input handling, and collision detection.
+   - Developers will be provided with comprehensive functional and technical documents for project development.
+   - End-users will receive a user manual offering detailed information on game functionality and instructions on gameplay.
 
-- **Game Design Assumptions**:
-  - The primary goal is to preserve the classic Pac-Man gameplay experience.
-  - The focus will be on a single-player experience without incorporating multiplayer features.
-  - Player input will be limited to keyboard controls to simplify development.
-  - A straightforward scoring system will be implemented without complex scoring mechanics.
+4. **Performance on Low-End Systems:**
+   - The game is expected to function optimally on both high-performance and low-performance systems.
 
-#### **8. Non-Functional**
+### **10. Evaluation Criteria**
 
-1. Performance Requirements:
+- **Enjoyability:**
 
-   - Response Time: The input is very reactive and fast, immediately as the user initiates an action.
-   - Frame Rate: The game needs a minimum frame rate of 60fps.
-   - Loading Time: The game has to be very fast when loading, with a short time delay during loading and game starting.
+  - Captures the classic Pac-Man experience with intuitive controls.
+  - Well-designed level that balances challenges and fairness.
+  - Engaging gameplay that maintains player attention.
+  - High-quality audio and visual elements contributing to immersion.
+  - User satisfaction with the overall gaming experience.
 
-2. Compatibility:
+- **Game Performance:**
 
-   - The game doesn't have any platform or system preference; it runs smoothly on all systems.
+  - No crashes detected during gameplay sessions.
+  - Smooth gameplay (60 fps) for an enjoyable experience.
+  - All advertised functionalities are present and well-presented.
 
-3. Documentation:
-
-   - Functional and technical documents will be required by developers to work on the project.
-   - A useful user manual will be provided for end-users to understand complete details on how the game functions and how to play it.
-
-4. Performance on Low-End Systems:
-   - The game should properly work on all types of systems in terms of performance, whether high or low performance.
-
-#### **9. Evaluation Criteria**
-
-- The game has to be as entertaining as possible.
-- Evaluate the graphic visual design and audio of the game.
-- No crashes detected during the gameplay session.
-- Reasonable levels, no impossible levels.
-- New features added.
-- Speed of the Game.
-- All functionalities present and well-presented.
-- The game has to satisfy those who are playing (the "User") and the customer.
-- Robustness of the program.
-
-#### **10. Conclusion**
-
-To conclude, the game has to be significant, entertaining, and presentable, and should be completed within 2 months.
+- **Customer Satisfaction:**
+  - The game meets the expectations of both players and the customer.
+  - Robustness of the program ensures a reliable gaming experience.
 
 ### **References**
 
-Pacman Game: [Pacman](https://www.toupty.com/jeupacman.html)
+Pac-Man Game: [Pacman](https://www.toupty.com/jeupacman.html)
 
-Pacman Document: [Information](https://fr.wikipedia.org/wiki/Pac-Man)
+Pac-Man Document: [Information](https://fr.wikipedia.org/wiki/Pac-Man)
 
 ### **Glossary**
 
+**DOSBox**:
+DOSBox is an open-source emulator that enables the emulation of MS-DOS (Microsoft Disk Operating System) on modern computer systems. It allows users to run and play software designed for MS-DOS, including classic video games and applications, on contemporary platforms. DOSBox provides a virtual environment that replicates the functionality of MS-DOS, allowing users to experience and interact with legacy software that was originally developed for DOS-based systems.
+
 **HUD**: In video gaming, the HUD (heads-up display) or status bar is the method by which information is visually relayed to the player as part of a game's user interface. It takes its name from the head-up displays used in modern aircraft.
 
-**Fruits**: There are different types of fruits in Pac-Man.
+**Fruits**: There are different types of fruits in Pac-Man. These items appear in the maze and serve as bonus points for the player when consumed. Each fruit has a specific point value, adding an extra layer of challenge and reward to the gameplay.
+
+**Power Pellets**: These are special pellets in Pac-Man that grant Pac-Man the ability to turn the tables on ghosts. When Pac-Man consumes a power pellet, ghosts turn blue and become vulnerable for a short period. During this time, Pac-Man can eat the frightened ghosts, earning additional points.
+
+**Scatter Mode**: A behavior exhibited by ghosts in Pac-Man. During scatter mode, ghosts temporarily retreat to their home corners, providing players with a strategic opportunity to navigate the maze more safely.
+
+**Chase Mode**: The default behavior of ghosts where they actively pursue Pac-Man throughout the maze. Each ghost has a unique chasing pattern, adding complexity to the gameplay.
+
+**Frightened Mode**: A state induced by Power Pellets where ghosts become vulnerable, changing color and wandering aimlessly. In this mode, Pac-Man can earn extra points by consuming the frightened ghosts.
+
+**Frame Rate**: The number of frames per second (fps) at which the game is designed to run. A higher frame rate contributes to smoother and more enjoyable gameplay.
+
+**Response Time**: The time it takes for the game to register and respond to user inputs, contributing to the overall responsiveness of the gameplay.
+
+**Enjoyability Criteria**: The qualitative aspects of the game that contribute to the player's enjoyment. This includes intuitive controls, well-designed levels, engaging gameplay, high-quality audio, and visual elements that enhance the gaming experience.
