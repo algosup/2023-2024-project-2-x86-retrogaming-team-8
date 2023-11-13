@@ -5,7 +5,7 @@
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 <details>
-<summary>:book: Table of Content</summary>
+<summary>Table of Content</summary>
 
 - [2023-2024 - PROJECT-2 - x86-RETROGAMING - TEAM - 8](#2023-2024---project-2---x86-retrogaming---team---8)
   - [Functional Specifications](#functional-specifications)
