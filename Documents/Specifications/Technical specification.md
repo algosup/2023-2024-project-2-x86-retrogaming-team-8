@@ -7,21 +7,26 @@
 <summary>📖 Table of content</summary>
 
 - [2023-2024 - PROJECT-2 - x86-RETROGAMING - TEAM - 8](#2023-2024---project-2---x86-retrogaming---team---8)
-  - [Technical Specifications](#functional-specifications)
-    - [**1. Introduction:**](#1-introduction)
-        - [**2. Solution**](#2-project-overview)
-    - [**2. Solution**](#2-project-overview)
-      - [**1. Project Scope:**](#1-project-scope)
-      - [**2. Objective:**](#2-objective)
-      - [**3. Personas \& Use Case**](#3-personas--use-case)
-      - [**4. Functionality**](#4-functionality)
-      - [**5. Milestones**](#5-milestones)
-      - [**6. Interfaces**](#6-interfaces)
-      - [**7. Risk \& Assumption**](#7-risk--assumption)
-      - [**8. Evaluation criteria**](#8-evaluation-criteria)
-      - [**9. Conclusion**](#9-conclusion)
-    - [**References**](#references)
-    - [**Glossary**](#glossary)
+  - [Technical Specification](#technical-specification)
+  - [1. Introduction](#1-introduction)
+    - [Overview, Problem Description, Summary, or Abstract](#overview-problem-description-summary-or-abstract)
+    - [Glossary or Terminology](#glossary-or-terminology)
+    - [Functional and Technical Requirements](#functional-and-technical-requirements)
+    - [Non-Goals or Out of Scope](#non-goals-or-out-of-scope)
+    - [Future Goals](#future-goals)
+    - [Assumptions](#assumptions)
+  - [2. Solutions](#2-solutions)
+    - [Architecture and Tools](#architecture-and-tools)
+    - [Game Components](#game-components)
+    - [Debugging and Testing](#debugging-and-testing)
+    - [Documentation](#documentation)
+    - [Future Enhancements](#future-enhancements)
+    - [Test Plan](#test-plan)
+    - [Resources](#resources)
+  - [3. Further Considerations](#3-further-considerations)
+    - [Third-party services and platforms considerations](#third-party-services-and-platforms-considerations)
+    - [Security considerations](#security-considerations)
+    - [Risks](#risks)
 
 </details>
 
@@ -67,44 +72,55 @@ Conditions and resources that need to be present and accessible for the solution
 ​
 ## 2. Solutions
 ​
-### Suggested or Proposed Solution / Design
+### Architecture and Tools
 ​
-- External components that the solution will interact with and that it will alter
-- Dependencies of the current solution
-- Pros and cons of the proposed solution
+***Assembly Language:***
+
+***Plateform:***
+
+***Text Editor/IDE and extentsions:***
+
 ​
-#### Data Model / Schema Changes
+### Game Components
 ​
-- Schema definitions
-- New data models
-- Modified data models
-- Data validation methods
+***Game Board:***
+
+***Graphics:***
+
+***user Input:***
+
+***User Input:***
+
+***Game Logic:***
+
+***Score and lives:***
+
+***Game Over and Win Conditions:***
+
 ​
-#### Business Logic
+### Debugging and Testing
 ​
-- Public APIs
-- Complex or interesting algorithms (consider include pseudocode)
-- Error states
-- Failure scenarios
-- Conditions that lead to errors and failures
-- Limitations
+***DOSbox debugger:***
+
+***Testing:***
+
 ​
-#### Presentation Layer
+### Documentation
 ​
-- Wireframes with descriptions
-- Links to UI/UX designer’s work
-- Mobile concerns
-- Web concerns
-- UI states
-- Error handling
+***Comments:***
+
+***Readme:***
+
 ​
-#### Other questions to answer
+### Future Enhancements
 ​
-- How will the solution scale?
-- What are the limitations of the solution?
-- How will it recover in the event of a failure?
-- How will it cope with future requirements?
-​
+***Sound effect:***
+
+***Levels:***
+
+***Graphics Improvements:***
+
+
 ### Test Plan
 ​
 - Explanations of how the tests will make sure user requirements are met
@@ -112,47 +128,32 @@ Conditions and resources that need to be present and accessible for the solution
 - Integrations tests
 - Performance & Reliability tests
 ​
-### Monitoring and Alerting Plan
+### Resources
 ​
-- Logging plan and tools
-- Monitoring plan and tools
-- Metrics to be used to measure health
-- How to ensure observability
-- Alerting plan and tools
-​
-### Release / Roll-out and Deployment Plan
-​
-- Deployment architecture
-- Deployment environments
-- Phased roll-out plan e.g. using feature flags
-- Plan outlining how to communicate changes to the users, for example, with release notes
-​
-### Alternate Solutions / Designs
-​
-- Short summary statement for each alternative solution
-- Pros and cons for each alternative
-- Reasons why each solution was not selected
-- Ways in which alternatives were inferior to the proposed solution
-- Migration plan to next best alternative in case the proposed solution falls through
 ​
 ## 3. Further Considerations
 ​
 ### Third-party services and platforms considerations
-​
-- Is it really worth it compared to building the service in-house?
-- What are some of the security and privacy concerns associated with the services/platforms?
-- How much will it cost?
-- How will it scale?
-- What possible future issues are anticipated?
+
+***Community Support***
+
+***DOS Emulator Compatibility:***
 ​
 ### Security considerations
 ​
-- What are the potential threats?
-- How will they be mitigated?
-- How will the solution affect the security of other components, services, and systems?
-​
+
 ### Risks
-​
-- What risks exist with this solution?
-- Are there risks that once taken can’t be walked back?
-- What is the cost-benefit analysis of taking these risks?
+
+***Time-Frame:***
+
+***Resource Limitations:***
+
+***Compatibility Issues:***
+
+***Learning Curve:***
+
+***Debugging Challenges:***
+
+***Community and Documentation:***
+
+***Project Scope:***
