@@ -122,31 +122,101 @@ Adequate development tools, including debuggers and profilers compatible with th
 ## 2. Solutions
 ​
 ### A. Architecture and Tools
-​
+Considering the fact that the game has already been created in all sorts of languages, to make this project innovative, we are going to use assembly language for this project, NASM will be use as assembler to make it unique, DOSbox too will be needed.
+
 - ***Assembly Language:***
+Closer to machine language and very efficient as it directly helps us manipulate computer components, it also uses a human-readable programming language and makes use of mnemonics to represent machine instruction. It is a low-level programming language.
+ 
+- ***Assembler:***
+NASM uses a simple and clear syntax, making it accessible to both beginners and experienced assembly language programmers. The syntax is designed to be similar to Intel-style assembly language, which is commonly used for x86 architecture.NASM is available for multiple platforms, including Windows, Linux, and macOS, making it a cross-platform assembler. This allows developers to write assembly code on one platform and assemble it for another. The latest version of NASM will be used for the project that is "2.16.02rc5", for each plateform.
+
+      section .data
+      hello db 'Hello, World!', 0
+
+      section .text
+      global _start
+
+      _start:
+      ; write the string to stdout
+      mov eax, 4         ; syscall number for sys_write
+      mov ebx, 1         ; file descriptor 1 is stdout
+      mov ecx, hello     ; pointer to the string
+      mov edx, 13        ; length of the string
+      int 0x80           ; interrupt to invoke the kernel
+
+      ; exit the program
+      mov eax, 1         ; syscall number for sys_exit
+      xor ebx, ebx       ; exit code 0
+      int 0x80           ; interrupt to invoke the kernel
+
+This code demonstrate a simple program to print out a "Hello, World!".
 
 - ***Plateform:***
+The game will be available for multiple platforms, that is, Windows, Linux, and macOS. This allows the users to have access to play the game on any system.
+
+- ***Emulator:***
+DOSBox is an open-source, x86 emulator with DOS (Disk Operating System) that allows you to run and debug assembly programming language software and games. It's available for various operating systems, including Windows, Linux, macOS, and others. This cross-platform support allows users to run DOS applications on a wide range of modern machines moreover  it emulates the x86 architecture, which was prevalent in the hardware of the MS-DOS era. This allows it to run software that was written for the original x86 processors.
 
 - ***Text Editor/IDE and extentsions:***
+VS Code and Notepad are IDEs that are widely used for programming assembly languages, but for this project, VS-Code will be suitable because of the extension, which is helpful and eases the work. For example, the extension (NASM x86 syntax hightlight), as its name suggests, helps to hightlight our code and easily repair each part during debugging, which is much more useful than having everything either in black or white.
 
-​
 ### B. Game Components
 ​
 #### a. Game Board:
+- ***Data Structure:***
+Represent the game board using 2D arrays. Define the walls, pallets, power-ups,ghost, Pac-Man.
+For exmaple, here under is simple enttity relationship diagram to illustrate how the simple pacman will look like.
+
+<p align="center">
+
+![alt](../../Images/ER_Diagram.png)
+
+</P>
+
+- ***ASCII Characters:***
+Use simple ASCII characters to represent different elements on the game board. For example, use '@' for Pac-Man, 'G' for ghosts, '.' for pellets, and '#' for walls.
 
 #### b. Graphics:
 
+
 #### c. user Input:
+- ***Keyboard Input:***
+Use DOS interrupts (e.g., INT 16h) to handle keyboard input. Map specific keys (e.g., arrow keys) for controlling Pac-Man's movement.
+
+- ***Game Loop:***
+Implement a game loop that continuously checks for user input. Update Pac-Man's position based on the input.
 
 #### e. Game Logic:
+- ***Starting the Game:***
+Define the key-press "Enter" to start a game from the game Menu, select the level of difficulties(Easy, Normal, Hard), and start playing the game
+
+- ***Movement Rules:***
+Define rules for Pac-Man's movement, ensuring it stays within the boundaries of the game board and reacts appropriately to walls that is enable collision, during contact with the wall.
+
+- ***Pac-Man chasing mode:***
+Implement logic for Pac-Man to activate the chasing mode, lasting for 10sec when ever he eat a power-up, making ghosts preys, and him a hunter.
+
+- ***Pellet Consumption:***
+Implement logic for Pac-Man to consume pellets and power-ups when moving over them. Update the score accordingly.
+
+- ***Ghost Behavior:***
+Define the behavior of ghosts. For example, make them move randomly or implement more sophisticated AI for chasing Pac-Man.
 
 #### f. Score and lives
 
-#### G. Game Over and Win Conditions:
+- ***Score Display:***
+Display the player's score on the screen. Update the score each time Pac-Man consumes a pellet or power-up.
 
+- ***Lives System:***
+Implement a lives system for Pac-Man. Display the remaining lives on the screen, and decrement the count when Pac-Man is caught by a ghost.
+#### G. Game Over and Win Conditions:
+- ***Game Over:***
+End the game when Pac-Man loses all lives. Display a game-over message and allow the player to restart or exit.
+
+- ***Win Conditions:***
+Implement win conditions, such as advancing to the next level when all pellets are consumed. Increase the difficulty with each level.
 ​
-### C. Debugging and Testing
-​
+### C. Debugging and Testing​
 - ***DOSbox debugger:***
 
 - ***Testing:***
