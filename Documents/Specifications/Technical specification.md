@@ -76,7 +76,7 @@ The game must be user-friendly and intuitive, a clean and clear User interface(U
   At the level of the User experience, for the efficiency part, define expectations regarding the efficiency of user interactions. This includes minimizing the number of steps needed to accomplish tasks.
 
 ### D. Non-Goals or Out of Scope
-​
+
 - ***Network Multiplayer:*** Designing the game for multiplayer functionality like battle game competition, network play, and local play.
 
 - ***Advanced Graphics Effects:*** Implementing complex graphics effects beyond the basic requirements, such as advanced shaders or particle effects.
@@ -86,7 +86,7 @@ The game must be user-friendly and intuitive, a clean and clear User interface(U
 - ***Cross-Platform Compatibility:*** The focus is solely on developing the game for a specific platform, and efforts to make it compatible with other platforms.
 
 ### E. Future Goals
-​
+
 - ***Enhanced AI:*** Integrate more sophisticated artificial intelligence algorithms to improve the behavior of ghosts in the game.
 
 - ***Additional Levels:*** Currently, the game will be designed with a single levels, and future goals will involve adding more levels to increase complexity.
@@ -95,10 +95,10 @@ The game must be user-friendly and intuitive, a clean and clear User interface(U
 
 - ***Additional Maze:*** Implementing a new maze for each level of difficulty (Easy, Normal, Hard)
 
-- ***Difficulties level:*** Currently, we will have a simple basic-level Pacman game, and the other levels of difficulty will be considered as feature goals.
+- ***Difficulties level:*** Currently, a simple basic-level Pacman game will be produced, and the other levels of difficulty will be considered as feature goals.
 ​
 ### F. Assumptions
-​
+
 - ***Development Environment:***
  The development environment includes a suitable x86 assembler and compiler configured for the target architecture.
 
@@ -161,7 +161,7 @@ DOSBox is an open-source, x86 emulator with DOS (Disk Operating System) that all
 VS Code and Notepad are IDEs that are widely used for programming assembly languages, but for this project, VS-Code will be suitable because of the extension, which is helpful and eases the work. For example, the extension (NASM x86 syntax hightlight), as its name suggests, helps to hightlight our code and easily repair each part during debugging, which is much more useful than having everything either in black or white.
 
 ### B. Game Components
-​
+
 #### a. Game Board:
 - ***Data Structure:***
 Represent the game board using 2D arrays. Define the walls, pallets, power-ups,ghost, Pac-Man.
@@ -176,17 +176,17 @@ For exmaple, here under is simple enttity relationship diagram to illustrate how
 - ***ASCII Characters:***
 Use simple ASCII characters to represent different elements on the game board. For example, use '@' for Pac-Man, 'G' for ghosts, '.' for pellets, and '#' for walls.
 
-#### b. Graphics:
+- ***Graphics:***
+For more advanced graphics, explore DOS graphics interrupts (e.g., INT 10h) to display more detailed and visually appealing sprites for Pac-Man, ghosts, and other game elements.
 
-
-#### c. user Input:
+#### b. user Input:
 - ***Keyboard Input:***
 Use DOS interrupts (e.g., INT 16h) to handle keyboard input. Map specific keys (e.g., arrow keys) for controlling Pac-Man's movement.
 
 - ***Game Loop:***
 Implement a game loop that continuously checks for user input. Update Pac-Man's position based on the input.
 
-#### e. Game Logic:
+#### c. Game Logic:
 - ***Starting the Game:***
 Define the key-press "Enter" to start a game from the game Menu, select the level of difficulties(Easy, Normal, Hard), and start playing the game
 
@@ -202,14 +202,14 @@ Implement logic for Pac-Man to consume pellets and power-ups when moving over th
 - ***Ghost Behavior:***
 Define the behavior of ghosts. For example, make them move randomly or implement more sophisticated AI for chasing Pac-Man.
 
-#### f. Score and lives
+#### d. Score and lives
 
 - ***Score Display:***
 Display the player's score on the screen. Update the score each time Pac-Man consumes a pellet or power-up.
 
 - ***Lives System:***
 Implement a lives system for Pac-Man. Display the remaining lives on the screen, and decrement the count when Pac-Man is caught by a ghost.
-#### G. Game Over and Win Conditions:
+#### e. Game Over and Win Conditions:
 - ***Game Over:***
 End the game when Pac-Man loses all lives. Display a game-over message and allow the player to restart or exit.
 
@@ -218,32 +218,49 @@ Implement win conditions, such as advancing to the next level when all pellets a
 ​
 ### C. Debugging and Testing​
 - ***DOSbox debugger:***
+Familiarize yourself with the DOSBox Debugger. Use breakpoints, step-by-step execution, and inspect memory to debug your assembly code effectively.
 
 - ***Testing:***
-
+  - Unit Testing:
+  Perform unit testing for individual components, such as Pac-Man movement, collision detection, and scoring logic.
+  - Scenario Testing:
+  Test the game in different scenarios to ensure it handles various user inputs, collisions, and edge cases robustly.
 ​
 ### D. Documentation
-​
+
 - ***Comments:***
+Detailed comments throughout the code, explaining the purpose of each section, each line, major functions, and any complex algorithms or calculations from scratch to help other software developer.
 
 - ***Readme:***
-
+Include clear instructions on how to assemble, run, and play the game using DOSBox.
 ​
 ### E. Future Enhancements
-​
+
 - ***Sound effect:***
+Consider using DOS interrupts (e.g., INT 21h) for simple sound effects to enhance the gaming experience.
+
+      mov ah, 86h     ; Function to play frequency on PC speaker
+      mov dx, frequency ; Frequency of the sound
+      int 21h         ; Call DOS
+
 
 - ***Levels:***
+Implement multiple levels with increasing difficulty. Design unique maze for each level.
+
+<p align="center">
+
+Current maze:
+![alt](https://www.imaginestemacademy.com/wp-content/uploads/2022/09/pacman.jpg)
+</p>
+
+<p align="center">
+
+Next level maze:
+![alt](https://c4.wallpaperflare.com/wallpaper/854/284/906/pacman-maze-harassment-wallpaper-preview.jpg)
+</p>
 
 - ***Graphics Improvements:***
-
-
-### F. Test Plan
-​
-- Explanations of how the tests will make sure user requirements are met
-- Unit tests
-- Integrations tests
-- Performance & Reliability tests
+Explore more advanced graphics techniques, such as sprite animation or additional graphics interrupts, for a visually appealing game.
 ​
 ### G. Resources
 ​
@@ -262,15 +279,15 @@ Implement win conditions, such as advancing to the next level when all pellets a
 ### C. Risks
 
 - ***Time-Frame:***
-
-- ***Resource Limitations:***
+  - A good manage of time for the project to ensure proper delivery. An unforeseen challenge in assembly during programming will impact on the project initial delivery date.
 
 - ***Compatibility Issues:***
+  - Potential compatibilty issue with DOS emulator, for example:
+    - Emulated graphics and sound may differ from real hardware, leading to graphical glitches or issues with sound playback.
+    - Emulators, especially those in active development, may have bugs or incomplete features that impact compatibility.
 
 - ***Learning Curve:***
+  - Acknowledge that learning x86 Assembly may have a steep learning curve, especially if you are new to low-level programming, and this can cause a subsequent delay in the delivery of the overall project..
 
 - ***Debugging Challenges:***
-
-- ***Community and Documentation:***
-
-- ***Project Scope:***
+  - Understand that debugging Assembly code can be challenging. A good part of the time will be invested in debugging and troubleshooting issues that may arise during development.
