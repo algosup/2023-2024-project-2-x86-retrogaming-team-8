@@ -337,9 +337,9 @@ In the image above, the score is at the bottom left corner of the screen image t
 - ***Sound effect:***
   - Consider enhancing the gaming experience by using DOS interrupts (e.g., INT 21h) for simple sound effects.
 
-        mov ah, 86h     ; Function to play frequency on PC speaker
-        mov dx, frequency ; Frequency of the sound
-        int 21h         ; Call DOS
+            mov ah, 86h     ; Function to play frequency on PC speaker
+            mov dx, frequency ; Frequency of the sound
+            int 21h         ; Call DOS
 
       The code above simply shows a simple part of a function needed to play a sound file.
 
