@@ -74,7 +74,7 @@ This aims to prevent the different issues in the game and validate when there ar
 
 Small Tutorial to set up DosBox
 
--Download DosBox 0.74-3 “https://www.dosbox.com/”
+-Download DosBox 0.74-3 https://www.dosbox.com/
 
 -Download the file given by the team
 
