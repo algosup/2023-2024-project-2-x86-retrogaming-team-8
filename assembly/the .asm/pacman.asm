@@ -48,13 +48,13 @@ jz NoKeyPress
 ; Check for key and update position
 
 wait_key_loop:
-       cmp ah, 4
+       cmp ah, 48h
        je MoveUp
-       cmp ah, 4
+       cmp ah, 50h
        je MoveDown
-       cmp ah, 4Dh
+       cmp ah, 4Bh
        je MoveLeft
-       cmp ah, 4
+       cmp ah, 4Dh
        je MoveRight
        jne wait_key_loop
 
