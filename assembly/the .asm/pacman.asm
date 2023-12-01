@@ -2,14 +2,14 @@
 org 100h
 
 section .data
-
-section .data
     xPos dw 160     ; Initial x position
     yPos dw 100     ; Initial y position
     xVelocity dw 1  ; Initial x velocity
     yVelocity dw 0  ; Initial y velocity
-
-
+    mov xPos,
+    mov yPos,
+    mov xVelocity,
+    mov yVelocity,
 
     Pacman db 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF
            db 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF
@@ -27,6 +27,7 @@ section .data
            db 0xFF, 0xFF, 0xFF, 0xFF, 0x2C, 0x2C, 0x2C, 0x2C, 0x2C, 0x2C, 0x2C, 0x2C, 0xFF, 0xFF, 0xFF, 0xFF
            db 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0x2C, 0x2C, 0x2C, 0x2C, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF
            db 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF
+           ;Pacman sprite
 
 section .text
 
@@ -48,13 +49,13 @@ jz NoKeyPress
 ; Check for key and update position
 
 wait_key_loop:
-       cmp ah, 48h
+       cmp ah, 48h ;if button "up arrow" pressed go to the programm MoveUp
        je MoveUp
-       cmp ah, 50h
+       cmp ah, 50h ;if button "down arrow" pressed go to the programm MoveDown
        je MoveDown
-       cmp ah, 4Bh
+       cmp ah, 4Bh ;if button "left arrow" pressed go to the programm MoveLeft
        je MoveLeft
-       cmp ah, 4Dh
+       cmp ah, 4Dh ;if button "right arrow" pressed go to the programm MoveRight
        je MoveRight
        jne wait_key_loop
 
@@ -171,4 +172,3 @@ ret
 ChangeVelocity:
 neg word [xVelocity]
 jmp GameLoop
-
