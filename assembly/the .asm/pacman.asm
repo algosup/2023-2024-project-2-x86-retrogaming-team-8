@@ -135,27 +135,27 @@ the_functions:
 
 ; need to set the color of filling in al
 clearScreen:
-mov ax, [cs;:backBufferSeg]
+mov ax, [cs:backBufferSeg]
 mov es, ax
 mov di, 0
 mov cx, 320*200
 rep stosb
 ret 
 
-;presentBackBuffer:
-;push ds
-;push es
-;mov ax, [cs:backBufferSeg]
-;mov ds, ax
-;mov ax, 0A000h
-;mov es, ax
-;xor si, si
-;xor di, di
-;mov cx, 320*200
-;rep movsb
-;op es
-;pop ds
-;ret
+presentBackBuffer:
+push ds
+push es
+mov ax, [cs:backBufferSeg]
+mov ds, ax
+mov ax, 0A000h
+mov es, ax
+xor si, si
+xor di, di
+mov cx, 320*200
+rep movsb
+op es
+pop ds
+ret
 
 loopy5:
     mov cx, 16
@@ -166,7 +166,7 @@ loopy5:
 ret
 
 printplayer:
-    mov ax, [cs;:backBufferSeg]
+    mov ax, [cs:backBufferSeg]
     mov es, ax
     mov dx, 16
 
