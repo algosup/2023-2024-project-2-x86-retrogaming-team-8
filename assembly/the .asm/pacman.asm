@@ -3,13 +3,11 @@ org 100h
 
 section .data
 
-section .data
+    backBufferSeg resw 1
     xPos dw 160     ; Initial x position
     yPos dw 100     ; Initial y position
     xVelocity dw 1  ; Initial x velocity
     yVelocity dw 0  ; Initial y velocity
-
-
 
     Pacman db 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF
            db 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF
@@ -27,6 +25,7 @@ section .data
            db 0xFF, 0xFF, 0xFF, 0xFF, 0x2C, 0x2C, 0x2C, 0x2C, 0x2C, 0x2C, 0x2C, 0x2C, 0xFF, 0xFF, 0xFF, 0xFF
            db 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0x2C, 0x2C, 0x2C, 0x2C, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF
            db 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF
+           ;Pacman sprite
 
 section .text
 
@@ -38,6 +37,7 @@ GameLoop:
     call clearScreen
     call wait_key_loop
 
+
     ; Check for keypress
     mov ah, 01h
     int 16h
@@ -48,28 +48,29 @@ jz NoKeyPress
 ; Check for key and update position
 
 wait_key_loop:
-       cmp ah, 4
+       cmp ah, 48h ;if button "up arrow" pressed go to the programm MoveUp
        je MoveUp
-       cmp ah, 4
+       cmp ah, 50h ;if button "down arrow" pressed go to the programm MoveDown
        je MoveDown
-       cmp ah, 4Dh
+       cmp ah, 4Bh ;if button "left arrow" pressed go to the programm MoveLeft
        je MoveLeft
-       cmp ah, 4
+       cmp ah, 4Dh ;if button "right arrow" pressed go to the programm MoveRight
        je MoveRight
        jne wait_key_loop
 
 NoKeyPress:
     ; Update Pacman position based on velocity
-    mov di, [yPos]      ; Use yPos for vertical position
+    mov di, word [yPos]      ; Use yPos for vertical position
     mov si, Pacman
     call printplayer
+    call presentBackBuffer
 
-    mov bx, [xPos]
-    add bx, [xVelocity]
+    mov bx, word [xPos]
+    add bx, word [xVelocity]
     mov word [xPos], bx
 
-    mov bx, [yPos]
-    add bx, [yVelocity]
+    mov bx, word [yPos]
+    add bx, word [yVelocity]
     mov word [yPos], bx
 
     ; Wait loop
@@ -92,20 +93,20 @@ NoKeyPress:
     jmp GameLoop
 
 MoveUp:
-    add [yVelocity], 1
+    add word [yVelocity], 1
     jmp NoKeyPress
 
 MoveDown:
 
-    sub [yVelocity], 1
+    sub word [yVelocity], 1
     jmp NoKeyPress
 
 MoveLeft:
-    sub [xVelocity], 1
+    sub word [xVelocity], 1
     jmp NoKeyPress
 
 MoveRight:
-    add [xVelocity], 1
+    add word [xVelocity], 1
     jmp NoKeyPress
 
 ChangeVelocityX:
@@ -134,13 +135,27 @@ the_functions:
 
 ; need to set the color of filling in al
 clearScreen:
-mov ax, 0xA000
+mov ax, [cs:backBufferSeg]
 mov es, ax
 mov di, 0
 mov cx, 320*200
 rep stosb
 ret 
 
+presentBackBuffer:
+push ds
+push es
+mov ax, [cs:backBufferSeg]
+mov ds, ax
+mov ax, 0A000h
+mov es, ax
+xor si, si
+xor di, di
+mov cx, 320*200
+rep movsb
+pop es
+pop ds
+ret
 ;printMaze:
 ;mov ax, 0xA000
 ;mov es, ax
@@ -156,19 +171,23 @@ loopy5:
 ret
 
 printplayer:
- mov ax, 0xA000
- mov es, ax
- mov dx, 16
+    mov ax, [cs:backBufferSeg]
+    mov es, ax
+    mov dx, 16
 
-loopyy:
-    mov cx, 16
-    rep movsb
-    add di, 320-16
-    dec dx
-    jnz loopyy
-ret
+    cld  ; Clear direction flag
+
+    loopyy:
+        mov cx, 16
+        rep movsb
+        add di, 320-16
+        dec dx
+        jnz loopyy
+    ret
+
 
 ChangeVelocity:
 neg word [xVelocity]
 jmp GameLoop
 
+%include "seg.inc"
