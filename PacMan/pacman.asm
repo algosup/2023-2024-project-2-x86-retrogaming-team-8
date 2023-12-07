@@ -4,8 +4,8 @@ org 100h
 section .data
 
     backBufferSeg resw 1
-    xPos dw 160     ; Initial x position
-    yPos dw 100     ; Initial y position
+    xPos dw 0     ; Initial x position
+    yPos dw 0     ; Initial y position
     xVelocity dw 1  ; Initial x velocity
     yVelocity dw 0  ; Initial y velocity
 
@@ -29,7 +29,7 @@ section .data
 
 section .text
 
-mov ax, 0013h      ; Set Video Mode 4F02h (VBE mode 101h) - 640x480, 256 colors
+mov ax, 0013h      ; setting the video mode for 640x480 screen and getting 256 colors. screen can be expanded without problem
 int 10h
 
 GameLoop:
@@ -48,74 +48,73 @@ jz NoKeyPress
 ; Check for key and update position
 
 wait_key_loop:
-       cmp ah, 48h ;if button "up arrow" pressed go to the programm MoveUp
-       je MoveUp
-       cmp ah, 50h ;if button "down arrow" pressed go to the programm MoveDown
-       je MoveDown
-       cmp ah, 4Bh ;if button "left arrow" pressed go to the programm MoveLeft
-       je MoveLeft
-       cmp ah, 4Dh ;if button "right arrow" pressed go to the programm MoveRight
-       je MoveRight
-       jne wait_key_loop
-
+;       cmp ah, 48h ;if button "up arrow" pressed go to the programm MoveUp
+ ;      je MoveUp
+  ;     cmp ah, 50h ;if button "down arrow" pressed go to the programm MoveDown
+   ;    je MoveDown
+    ;   cmp ah, 4Bh ;if button "left arrow" pressed go to the programm MoveLeft
+     ;  je MoveLeft
+      ; cmp ah, 4Dh ;if button "right arrow" pressed go to the programm MoveRight
+       ;je MoveRight
+       ;jne wait_key_loop
 NoKeyPress:
     ; Update Pacman position based on velocity
-    mov di, word [yPos]      ; Use yPos for vertical position
-    mov si, Pacman
-    call printplayer
-    call presentBackBuffer
+    ;mov di, word [yPos]      ; Use yPos for vertical position
+    ;mov si, Pacman
+    ;call printplayer
+    ;call presentBackBuffer
 
-    mov bx, word [xPos]
-    add bx, word [xVelocity]
-    mov word [xPos], bx
+    ;mov bx, word [xPos]
+    ;add bx, word [xVelocity]
+    ;mov word [xPos], bx
 
-    mov bx, word [yPos]
-    add bx, word [yVelocity]
-    mov word [yPos], bx
+    ;mov bx, word [yPos]
+    ;add bx, word [yVelocity]
+    ;mov word [yPos], bx
 
     ; Wait loop
-    mov cx, 10000
+    ;mov cx, 10000
 
     WaitLoop:
         loop WaitLoop
 
     ; Check boundaries and change velocity if necessary
-    cmp word [xPos], 320-16
-    je ChangeVelocityX
-    cmp word [xPos], 0
-    je ChangeVelocityX
+    ;cmp word [xPos], 320-16
+    ;je ChangeVelocityX
+    ;cmp word [xPos], 0
+    ;je ChangeVelocityX
 
-    cmp word [yPos], 200-16
-    je ChangeVelocityY
-    cmp word [yPos], 0
-    je ChangeVelocityY
+    ;cmp word [yPos], 200-16
+    ;je ChangeVelocityY
+    ;cmp word [yPos], 0
+    ;je ChangeVelocityY
 
-    jmp GameLoop
+    ;jmp GameLoop
 
 MoveUp:
-    add word [yVelocity], 1
-    jmp NoKeyPress
+    ;add word [yVelocity], 1
+    ;jmp NoKeyPress
 
 MoveDown:
 
-    sub word [yVelocity], 1
-    jmp NoKeyPress
+    ;sub word [yVelocity], 1
+    ;jmp NoKeyPress
 
 MoveLeft:
-    sub word [xVelocity], 1
-    jmp NoKeyPress
+    ;sub word [xVelocity], 1
+    ;jmp NoKeyPress
 
 MoveRight:
-    add word [xVelocity], 1
-    jmp NoKeyPress
+    ;add word [xVelocity], 1
+    ;jmp NoKeyPress
 
 ChangeVelocityX:
-    neg word [xVelocity]
-    jmp GameLoop
+    ;neg word [xVelocity]
+    ;jmp GameLoop
 
 ChangeVelocityY:
-    neg word [yVelocity]
-    jmp GameLoop
+    ;neg word [yVelocity]
+    ;jmp GameLoop
 
 Exit:
     mov ax, 0C01h ; 
@@ -134,8 +133,8 @@ Exit:
 the_functions:
 
 ; need to set the color of filling in al
-clearScreen:
-mov ax, [cs:backBufferSeg]
+clearScreen: ;this part of the programm will clean with a rapid speed
+mov ax, [cs:backBufferSeg]; backbufferSeg is needed for making sure that the cleaning doesn't provoke flickering !
 mov es, ax
 mov di, 0
 mov cx, 320*200
