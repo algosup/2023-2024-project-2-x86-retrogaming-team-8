@@ -3,11 +3,18 @@ org 100h
 
 section .data
 
+    %define SCREEN_WIDTH 320
+    %define SCREEN_HEIGHT 200
+    spritew dw 8
+    spriteh dw 8
+    %define SPRITEW 8
+    %define SPRITEH 8
     backBufferSeg resw 1
     xPos dw 0     ; Initial x position
     yPos dw 0     ; Initial y position
     xVelocity dw 1  ; Initial x velocity
     yVelocity dw 0  ; Initial y velocity
+    actualKeystroke dw 4Dh
 
     Pacman db 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF
            db 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF
@@ -43,9 +50,102 @@ GameLoop:
     int 16h
 
 ; AH = 0 if no key pressed, AH = ASCII code if key pressed
-jz NoKeyPress
+;jz NoKeyPress
 
 ; Check for key and update position
+
+
+read_character_key_was_pressed:
+    mov ah, 01h        ; Check if a key has been pressed (non-blocking)
+    int 16h
+    jz continue_movement ; If no key pressed, continue current movement
+
+    ; Read the keystroke
+    mov ah, 00h
+    int 16h
+    cmp ah, 4Dh
+    je update_keystroke
+    cmp ah, 4Bh
+    je update_keystroke
+    cmp ah, 48h
+    je update_keystroke
+    cmp ah, 50h
+    je update_keystroke
+    jmp continue_movement
+
+update_keystroke:
+    mov [actualKeystroke], ah  ; Store the new direction
+    jmp continue_movement
+
+continue_movement:
+    mov al, [actualKeystroke]
+    cmp al, 4Dh
+    je .move_right
+    cmp al, 4Bh
+    je .move_left
+    cmp al, 48h
+    je .move_up
+    cmp al, 50h
+    je .move_down
+    ret
+    .move_right:
+        call move_right
+        ret
+    .move_left:
+        call move_left
+        ret
+    .move_up:
+        call move_up
+        ret
+    .move_down:
+        call move_down
+        ret
+    ret
+
+move_right:
+    mov word [actualKeystroke], 4Dh
+    call Pacman   ; animation
+    mov bx, [xPos]
+    add bx, 3/2
+    cmp bx, SCREEN_WIDTH - SPRITEW 
+    jae .skip_move_right
+    mov [xPos], bx
+.skip_move_right:
+    ret
+move_left:
+    mov word [actualKeystroke], 4Bh
+    call Pacman   ; animation
+    mov bx, [xPos]
+    sub bx, 3/2
+    cmp bx, 0
+    jbe .skip_move_left
+    mov [xPos], bx
+.skip_move_left:
+    ret
+
+move_up:
+    mov word [actualKeystroke], 48h
+    call Pacman      ; animation
+    mov bx, [yPos]
+    sub bx, 3/2
+    cmp bx, 0
+    jbe .skip_move_up
+    mov [yPos], bx
+.skip_move_up:
+    ret
+
+move_down:
+    mov word [actualKeystroke], 50h
+    call Pacman   ; animation
+    mov bx, [yPos]
+    add bx, 3/2
+    cmp bx, SCREEN_HEIGHT - SPRITEH 
+    jae .skip_move_down
+    mov [yPos], bx
+    
+.skip_move_down:
+    ret
+
 
 wait_key_loop:
 ;       cmp ah, 48h ;if button "up arrow" pressed go to the programm MoveUp
@@ -76,7 +176,7 @@ NoKeyPress:
     ;mov cx, 10000
 
     WaitLoop:
-        loop WaitLoop
+        ;loop WaitLoop
 
     ; Check boundaries and change velocity if necessary
     ;cmp word [xPos], 320-16
