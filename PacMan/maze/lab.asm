@@ -115,11 +115,11 @@ BW     db 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 section .text
 
 mov ax, 0013h      ; Set Video Mode 4F02h (VBE mode 101h) - 640x480, 256 colors
-;mov bx, 101h    ; VBE mode 101h
+; mov bx, 101h    ; VBE mode 101h
 int 10h
 
 mov di, [xPos]
-mov si, maze
+mov si, ULO
 call printMaze
 
 Exit:
