@@ -123,7 +123,7 @@ Software: The game is executed with DosBox.
 
 (NASM was chosen because it is more adapted to our case)
 
-Configuration: The screen resolution for the game in DOSBox is **320x240**
+Configuration: The screen resolution for the game in DOSBox is **320x200**
 
 For this game we decided to use the keyboard arrows (left,right,up,down) to move the main character of the game. These controls were chosen because this is easier to use with this style of game and we also don’t have the problem of “Qwerty” “Azerty”.
 
