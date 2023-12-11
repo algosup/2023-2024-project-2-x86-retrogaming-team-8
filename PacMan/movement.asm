@@ -26,25 +26,25 @@ mov al, 13h
 mov ah, 00h
 int 10h
 
-call ClearScreen
+call clearScreen
 
-GameLoop:
-call WaitLoop
+gameLoop:
+call waitLoop
 mov ah, 01h
 int 16h
-jz GameLoop
+jz gameLoop
 mov ah, 00h
 int 16h
 cmp ah, 48h
-je MoveUp
+je moveUp
 cmp ah, 4Bh
-je MoveLeft
+je moveLeft
 cmp ah, 4Dh
-je MoveRight
+je moveRight
 cmp ah, 50h
-je MoveDown
+je moveDown
 
-ClearScreen:
+clearScreen:
 mov ax, 0xA000
 mov es, ax
 mov di, 0
@@ -52,54 +52,54 @@ mov cx, 320*200
 rep stosb
 ret
 
-ClearPacMan:
+clearPacMan:
 mov di, [position]
 mov si, emptyspace
-call DrawPacMan
+call drawPacMan
 ret
 
-DrawPacMan:
+drawPacMan:
 mov di, [position]
 mov dx, 10
 
-          Lines:
+          eachLine:
           mov cx, 10
           rep movsb
           add di, 320-10
           dec dx
-          jnz Lines
+          jnz eachLine
           ret
 
 
-MoveLeft:
-call ClearPacMan
-mov si, pacManChompLeft1
+moveLeft:
+call clearPacMan
+mov si, pacmanChompLeft1
 sub word [position], 1*2
-call DrawPacMan 
-jmp GameLoop
+call drawPacMan 
+jmp gameLoop
 
 
-MoveRight:
-call ClearPacMan
-mov si, PacManChompRight1
+moveRight:
+call clearPacMan
+mov si, pacmanChompRight1
 add word [position], 1*2
-call DrawPacMan
-jmp GameLoop
+call drawPacMan
+jmp gameLoop
 
-MoveUp:
-call ClearPacMan
-mov si, pacManChompUp1
+moveUp:
+call clearPacMan
+mov si, pacmanChompUp1
 sub word [position], 320*2
-call DrawPacMan
-jmp GameLoop
+call drawPacMan
+jmp gameLoop
 
-MoveDown:
-call ClearPacMan
-mov si, PacManChompDown1
+moveDown:
+call clearPacMan
+mov si, pacmanChompDown1
 add word [position], 320*2
-call DrawPacMan
-jmp GameLoop
+call drawPacMan
+jmp gameLoop
 
-WaitLoop:
-loop WaitLoop
+waitLoop:
+loop waitLoop
 ret

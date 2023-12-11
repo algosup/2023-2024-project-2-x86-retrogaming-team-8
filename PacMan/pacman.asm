@@ -163,172 +163,172 @@ section .text
         ret
 
     empty:                  
-        mov si, EmptySpace           
+        mov si, emptySpace           
         call drawWalls          
         jmp wallchoice         
 
     roomGhost:
-        mov si, GhostRoom
+        mov si, ghostRoom
         call drawWalls
         jmp wallchoice
 
     wall1:              
-        mov si, WallBasic1
+        mov si, wallBasic1
         call drawWalls
         jmp wallchoice
 
     wall2:
-        mov si, WallBasic2
+        mov si, wallBasic2
         call drawWalls
         jmp wallchoice
 
     wall3:
-        mov si, WallBasic3
+        mov si, wallBasic3
         call drawWalls
         jmp wallchoice
 
     wall4:
-        mov si, WallBasic4
+        mov si, wallBasic4
         call drawWalls
         jmp wallchoice
 
     angleWall1:
-        mov si, AngleBasic1
+        mov si, angleBasic1
         call drawWalls
         jmp wallchoice
 
     angleWall2:
-        mov si, AngleBasic2
+        mov si, angleBasic2
         call drawWalls
         jmp wallchoice
 
     angleWall3:
-        mov si, AngleBasic3
+        mov si, angleBasic3
         call drawWalls
         jmp wallchoice
 
     angleWall4:
-        mov si, AngleBasic4
+        mov si, angleBasic4
         call drawWalls
         jmp wallchoice
 
     angleWall5:
-        mov si, AngleBasic5
+        mov si, angleBasic5
         call drawWalls
         jmp wallchoice
 
     angleWall6:
-        mov si, AngleBasic6
+        mov si, angleBasic6
         call drawWalls
         jmp wallchoice
 
     angleWall7:
-        mov si, AngleBasic7
+        mov si, angleBasic7
         call drawWalls
         jmp wallchoice
 
     angleWall8:
-        mov si, AngleBasic8
+        mov si, angleBasic8
         call drawWalls
         jmp wallchoice
 
     wallDouble1:
-        mov si, DoubleWall1
+        mov si, doubleWall1
         call drawWalls
         jmp wallchoice
 
     wallDouble2:
-        mov si, DoubleWall2
+        mov si, doubleWall2
         call drawWalls
         jmp wallchoice
 
     wallDouble3:
-        mov si, DoubleWall3
+        mov si, doubleWall3
         call drawWalls
         jmp wallchoice
 
     wallDouble4:
-        mov si, DoubleWall4
+        mov si, doubleWall4
         call drawWalls
         jmp wallchoice
 
     angleDouble1:
-        mov si, AngleDoubleWall1
+        mov si, angleDoubleWall1
         call drawWalls
         jmp wallchoice
 
     angleDouble2:
-        mov si, AngleDoubleWall2
+        mov si, angleDoubleWall2
         call drawWalls
         jmp wallchoice
 
     angleDouble3:
-        mov si, AngleDoubleWall3
+        mov si, angleDoubleWall3
         call drawWalls
         jmp wallchoice
 
     angleDouble4:
-        mov si, AngleDoubleWall4
+        mov si, angleDoubleWall4
         call drawWalls
         jmp wallchoice
 
     angleDifDouble1:
-        mov si, OtherAngleDoubleWall1
+        mov si, otherAngleDoubleWall1
         call drawWalls
         jmp wallchoice
 
     angleDifDouble2:
-        mov si, OtherAngleDoubleWall2
+        mov si, otherAngleDoubleWall2
         call drawWalls
         jmp wallchoice
 
     angleDifDouble3:
-        mov si, OtherAngleDoubleWall3
+        mov si, otherAngleDoubleWall3
         call drawWalls
         jmp wallchoice
 
     angleDifDouble4:
-        mov si, OtherAngleDoubleWall4
+        mov si, otherAngleDoubleWall4
         call drawWalls
         jmp wallchoice
 
     angleDifDouble5:
-        mov si, OtherAngleDoubleWall5
+        mov si, otherAngleDoubleWall5
         call drawWalls
         jmp wallchoice
 
     angleDifDouble6:
-        mov si, OtherAngleDoubleWall6
+        mov si, otherAngleDoubleWall6
         call drawWalls
         jmp wallchoice
 
     doubleDoor1:
-        mov si, DoorDoubleWall1
+        mov si, doorDoubleWall1
         call drawWalls
         jmp wallchoice
 
     doubleDoor2:
-        mov si, DoorDoubleWall2
+        mov si, doorDoubleWall2
         call drawWalls
         jmp wallchoice
 
     straightDouble1:
-        mov si, DoubleStraightAngle1
+        mov si, doubleStraightAngle1
         call drawWalls
         jmp wallchoice
     
     straightDouble2:
-        mov si, DoubleStraightAngle2
+        mov si, doubleStraightAngle2
         call drawWalls
         jmp wallchoice
 
     straightDouble3:
-        mov si, DoubleStraightAngle3
+        mov si, doubleStraightAngle3
         call drawWalls
         jmp wallchoice
 
     straightDouble4:
-        mov si, DoubleStraightAngle4
+        mov si, doubleStraightAngle4
         call drawWalls
         jmp wallchoice
     
