@@ -50,7 +50,7 @@ section .text          ; Set up the video mode
   call clearScreen    
 
     gameLoop:
-    call tileMap
+    call tilemap
 
     drawWalls:         ; Draw 1 tile
         mov dx, 6           
@@ -87,7 +87,7 @@ section .text          ; Set up the video mode
         mov [pixelNumber], ax   
         ret
 
-    tileMap:    
+    tilemap:    
         mov di, 0              
         mov bx, tileMap 
 
