@@ -67,7 +67,7 @@ clearScreen:
 clearPacMan:
     mov di, [position]
     mov si, emptyspace
-    call DrawPacMan
+    call drawPacMan
     ret
 
 ; Printing line by line the PacMan using the postion
@@ -80,7 +80,7 @@ drawPacMan:
           rep movsb
           add di, 320-10
           dec dx
-          jnz eachLine
+          jnz eachline
           ret
 
 
