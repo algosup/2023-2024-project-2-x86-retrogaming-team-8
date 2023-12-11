@@ -1,0 +1,105 @@
+org 100h
+
+%include "sprite.asm"
+
+section .data
+
+             emptyspace db 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+                        db 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+                        db 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+                        db 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+                        db 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+                        db 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+                        db 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+                        db 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+                        db 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+                        db 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+
+;Default position
+position dw 23000
+
+
+section .text
+
+;initialization
+mov al, 13h
+mov ah, 00h
+int 10h
+
+call ClearScreen
+
+GameLoop:
+call WaitLoop
+mov ah, 01h
+int 16h
+jz GameLoop
+mov ah, 00h
+int 16h
+cmp ah, 48h
+je MoveUp
+cmp ah, 4Bh
+je MoveLeft
+cmp ah, 4Dh
+je MoveRight
+cmp ah, 50h
+je MoveDown
+
+ClearScreen:
+mov ax, 0xA000
+mov es, ax
+mov di, 0
+mov cx, 320*200
+rep stosb
+ret
+
+ClearPacMan:
+mov di, [position]
+mov si, emptyspace
+call DrawPacMan
+ret
+
+DrawPacMan:
+mov di, [position]
+mov dx, 10
+
+          Lines:
+          mov cx, 10
+          rep movsb
+          add di, 320-10
+          dec dx
+          jnz Lines
+          ret
+
+
+MoveLeft:
+call ClearPacMan
+mov si, pacManChompLeft1
+sub word [position], 1*2
+call DrawPacMan 
+jmp GameLoop
+
+
+MoveRight:
+call ClearPacMan
+mov si, PacManChompRight1
+add word [position], 1*2
+call DrawPacMan
+jmp GameLoop
+
+MoveUp:
+call ClearPacMan
+mov si, pacManChompUp1
+sub word [position], 320*2
+call DrawPacMan
+jmp GameLoop
+
+MoveDown:
+call ClearPacMan
+mov si, PacManChompDown1
+add word [position], 320*2
+call DrawPacMan
+jmp GameLoop
+
+WaitLoop:
+loop WaitLoop
+ret
