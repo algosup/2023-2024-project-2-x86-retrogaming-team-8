@@ -104,7 +104,7 @@ There is a list of the different features that need to be tested (more of them w
 
 ### **Test Environment**
 
-Hardware: To be executed the assembly program needs to be run on windows that we chose for the moment because our programmers use this system. This language was chosen because it is the closest to the computer so it accord better performances and optimization.
+Hardware: To be executed the assembly program can be run on windows and Mac. This language was chosen because it is the closest to the computer so it accord better performances and optimization.
 
 Software: The game is executed with DosBox.
 
@@ -144,8 +144,11 @@ To pass the validation all the features of the game like the bonus or the compor
 
 #### - Defect Tracking :
  - 3 categories were created to place a problem in, depending on its level of severity.
+
         - Low defect : This category is for problems that don't really impact the game.
+   
         - Medium defect : This category is for problems that need to be fixed but it doesn’t really break the game or a little bit.
+   
         - High defect : This category is for problems that really need to be fixed the fastest possible because it slows the game or breaks it completely.
 
     - There is a link that redirect to the defect tracking : [Defect tracking](https://docs.google.com/document/d/1bZA9nYV4HJPozw40op41qdQ70PylubrQBjvAgbuX0m4/edit?usp=sharing)
@@ -156,7 +159,7 @@ To pass the validation all the features of the game like the bonus or the compor
 This approach was chosen to test every components present in the game, first we will start with the functional testing :
 
 - Unit testing : This type of test consists of verifying every feature of the game individually of the others and if one part has an error a report will be made at the developers.
-- Integration testing : After that if the Unit testing didn’t have an error we gathered all the parts in one and made another test to be sure that it worked together.
+- Integration testing : After that if the Unit testing didn’t have an error we gather all the parts in one and made another test to be sure that it worked together.
 
 Performance testing :
 - Stress testing : Stress testing is when we push the game far in its performances to test it, for example we can place a lot of ghosts or a lot of food in the game.
@@ -174,7 +177,7 @@ Security testing :
 
 ### **Review and Approval**
 
-A meet was made with the rest of the team to validate the test plan that was displayed on the TV. After that, the Project manager also approved.
+A meet was made with the rest of the team to validate the test plan. After that, the Project manager also approved.
 
 ### **Responsibilities**
 
