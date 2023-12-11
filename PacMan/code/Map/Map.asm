@@ -1,12 +1,21 @@
 org 100h
 
-%include "sprite.asm"
-
 section .data
 
     ; maze array
 
-tileMap  db 26,22,22,22,22,22,22,22,22,22,22,22,22,30,31,22,22,22,22,22,22,22,22,22,22,22,22,27
+             emptyspace db 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+                        db 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+                        db 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+                        db 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+                        db 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+                        db 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+                        db 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+                        db 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+                        db 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+                        db 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+
+tilemap  db 26,22,22,22,22,22,22,22,22,22,22,22,22,30,31,22,22,22,22,22,22,22,22,22,22,22,22,27
          db 25, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,13,12, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,24
          db 25, 0,14,10,10,15, 0,14,10,10,10,15, 0,13,12, 0,14,10,10,10,15, 0,14,10,10,15, 0,24
          db 25, 0,13, 0, 0,12, 0,13, 0, 0, 0,12, 0,13,12, 0,13, 0, 0, 0,12, 0,13, 0, 0,12, 0,24
@@ -37,20 +46,13 @@ tileMap  db 26,22,22,22,22,22,22,22,22,22,22,22,22,30,31,22,22,22,22,22,22,22,22
          db 25, 0,17,11,11,11,11,11,11,11,11,16, 0,17,16, 0,17,11,11,11,11,11,11,11,11,16, 0,24
          db 25, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,24
          db 29,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,28
-   
+ 
+    position dw 23000
     Column dw 28    
     Row dw 31       
     pixelNumber dw 1920 
 
-section .text          ; Set up the video mode
-    mov ah, 00h     
-    mov al, 13h     
-    int 10h         
-
-  call clearScreen    
-
-    gameLoop:
-    call tilemap
+section .text
 
     drawWalls:         ; Draw 1 tile
         mov dx, 6           
@@ -78,7 +80,7 @@ section .text          ; Set up the video mode
         dec ax             
         mov [Row], ax       
         cmp ax, 0           
-        je end             
+        je gameLoop    
         mov ax, 28          
         mov [Column], ax    
         mov ax, [pixelNumber] 
@@ -87,10 +89,10 @@ section .text          ; Set up the video mode
         mov [pixelNumber], ax   
         ret
 
-    tilemap:    
+    tilemaps:    
         mov di, 0              
-        mov bx, tileMap 
-
+        mov bx, tilemap 
+    
         wallChoice:     ; Associates a tileMap number with a sprite.
             mov al, [bx]       
             cmp al, 0          
@@ -164,7 +166,7 @@ section .text          ; Set up the video mode
         ret
 
     empty:   ; Draw a sprite.                
-        mov si, emptySpace           
+        mov si, emptySpot           
         call drawWalls          
         jmp wallChoice         
 
@@ -332,14 +334,13 @@ section .text          ; Set up the video mode
         mov si, doubleStraightAngle4
         call drawWalls
         jmp wallChoice
-    
-        clearScreen:    ; Clears the screen by writing zeros to the video memory segment.
-            mov ax, 0xA000
-            mov es, ax
-            mov di, 0
-            mov cx, 320*200
+
+    clearScreen:    ; Clears the screen by writing zeros to the video memory segment.
+        mov ax, 0xA000
+        mov es, ax
+        mov di, 0
+        mov cx, 320*200
         rep stosb
         ret 
 
     end:
-        
