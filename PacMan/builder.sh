@@ -7,7 +7,7 @@ BIN_DIR="${ROOT_DIR}/bin"
 echo "ROOT_DIR: ${ROOT_DIR}"
 
 cd "${THIS_DIR}" && \
-    nasm movement.asm -f bin -o "${BIN_DIR}/movement.com"
+    nasm pacman.asm -f bin -o "${BIN_DIR}/pacman.com"
 
 
 

@@ -5,7 +5,8 @@ org 100h
 section .data
 
     ; maze array
-tilemap  db 26,22,22,22,22,22,22,22,22,22,22,22,22,30,31,22,22,22,22,22,22,22,22,22,22,22,22,27
+
+tileMap  db 26,22,22,22,22,22,22,22,22,22,22,22,22,30,31,22,22,22,22,22,22,22,22,22,22,22,22,27
          db 25, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,13,12, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,24
          db 25, 0,14,10,10,15, 0,14,10,10,10,15, 0,13,12, 0,14,10,10,10,15, 0,14,10,10,15, 0,24
          db 25, 0,13, 0, 0,12, 0,13, 0, 0, 0,12, 0,13,12, 0,13, 0, 0, 0,12, 0,13, 0, 0,12, 0,24
@@ -41,7 +42,7 @@ tilemap  db 26,22,22,22,22,22,22,22,22,22,22,22,22,30,31,22,22,22,22,22,22,22,22
     Row dw 31       
     pixelNumber dw 1920 
 
-section .text
+section .text          ; Set up the video mode
     mov ah, 00h     
     mov al, 13h     
     int 10h         
@@ -49,10 +50,9 @@ section .text
   call clearScreen    
 
     gameLoop:
-    call tileMap
+    call tilemap
 
-    drawWalls:
-        ; draw 1 tile
+    drawWalls:         ; Draw 1 tile
         mov dx, 6           
         .eachLine:  
             mov cx, 6       
@@ -64,7 +64,7 @@ section .text
         inc bx              
         ret
 
-    nextColumn:
+    nextColumn:        ; Move the pointer to the next column
         mov ax, [Column]   
         dec ax              
         mov [Column], ax    
@@ -73,7 +73,7 @@ section .text
         sub di, 1914        
         ret
 
-    nextRow:
+    nextRow:          ; Move the pointer to the next row.
         mov ax, [Row]       
         dec ax             
         mov [Row], ax       
@@ -84,13 +84,14 @@ section .text
         mov ax, [pixelNumber] 
         mov di, ax          
         add ax, 1920       
-        mov [pixelNumber], ax   ;
+        mov [pixelNumber], ax   
         ret
 
-    tileMap:
+    tilemap:    
         mov di, 0              
-        mov bx, tilemap           
-        wallchoice:
+        mov bx, tileMap 
+
+        wallChoice:     ; Associates a tileMap number with a sprite.
             mov al, [bx]       
             cmp al, 0          
             je empty        
@@ -162,181 +163,181 @@ section .text
             je straightDouble4
         ret
 
-    empty:                  
+    empty:   ; Draw a sprite.                
         mov si, emptySpace           
         call drawWalls          
-        jmp wallchoice         
+        jmp wallChoice         
 
     roomGhost:
         mov si, ghostRoom
         call drawWalls
-        jmp wallchoice
+        jmp wallChoice
 
     wall1:              
         mov si, wallBasic1
         call drawWalls
-        jmp wallchoice
+        jmp wallChoice
 
     wall2:
         mov si, wallBasic2
         call drawWalls
-        jmp wallchoice
+        jmp wallChoice
 
     wall3:
         mov si, wallBasic3
         call drawWalls
-        jmp wallchoice
+        jmp wallChoice
 
     wall4:
         mov si, wallBasic4
         call drawWalls
-        jmp wallchoice
+        jmp wallChoice
 
     angleWall1:
         mov si, angleBasic1
         call drawWalls
-        jmp wallchoice
+        jmp wallChoice
 
     angleWall2:
         mov si, angleBasic2
         call drawWalls
-        jmp wallchoice
+        jmp wallChoice
 
     angleWall3:
         mov si, angleBasic3
         call drawWalls
-        jmp wallchoice
+        jmp wallChoice
 
     angleWall4:
         mov si, angleBasic4
         call drawWalls
-        jmp wallchoice
+        jmp wallChoice
 
     angleWall5:
         mov si, angleBasic5
         call drawWalls
-        jmp wallchoice
+        jmp wallChoice
 
     angleWall6:
         mov si, angleBasic6
         call drawWalls
-        jmp wallchoice
+        jmp wallChoice
 
     angleWall7:
         mov si, angleBasic7
         call drawWalls
-        jmp wallchoice
+        jmp wallChoice
 
     angleWall8:
         mov si, angleBasic8
         call drawWalls
-        jmp wallchoice
+        jmp wallChoice
 
     wallDouble1:
         mov si, doubleWall1
         call drawWalls
-        jmp wallchoice
+        jmp wallChoice
 
     wallDouble2:
         mov si, doubleWall2
         call drawWalls
-        jmp wallchoice
+        jmp wallChoice
 
     wallDouble3:
         mov si, doubleWall3
         call drawWalls
-        jmp wallchoice
+        jmp wallChoice
 
     wallDouble4:
         mov si, doubleWall4
         call drawWalls
-        jmp wallchoice
+        jmp wallChoice
 
     angleDouble1:
         mov si, angleDoubleWall1
         call drawWalls
-        jmp wallchoice
+        jmp wallChoice
 
     angleDouble2:
         mov si, angleDoubleWall2
         call drawWalls
-        jmp wallchoice
+        jmp wallChoice
 
     angleDouble3:
         mov si, angleDoubleWall3
         call drawWalls
-        jmp wallchoice
+        jmp wallChoice
 
     angleDouble4:
         mov si, angleDoubleWall4
         call drawWalls
-        jmp wallchoice
+        jmp wallChoice
 
     angleDifDouble1:
         mov si, otherAngleDoubleWall1
         call drawWalls
-        jmp wallchoice
+        jmp wallChoice
 
     angleDifDouble2:
         mov si, otherAngleDoubleWall2
         call drawWalls
-        jmp wallchoice
+        jmp wallChoice
 
     angleDifDouble3:
         mov si, otherAngleDoubleWall3
         call drawWalls
-        jmp wallchoice
+        jmp wallChoice
 
     angleDifDouble4:
         mov si, otherAngleDoubleWall4
         call drawWalls
-        jmp wallchoice
+        jmp wallChoice
 
     angleDifDouble5:
         mov si, otherAngleDoubleWall5
         call drawWalls
-        jmp wallchoice
+        jmp wallChoice
 
     angleDifDouble6:
         mov si, otherAngleDoubleWall6
         call drawWalls
-        jmp wallchoice
+        jmp wallChoice
 
     doubleDoor1:
         mov si, doorDoubleWall1
         call drawWalls
-        jmp wallchoice
+        jmp wallChoice
 
     doubleDoor2:
         mov si, doorDoubleWall2
         call drawWalls
-        jmp wallchoice
+        jmp wallChoice
 
     straightDouble1:
         mov si, doubleStraightAngle1
         call drawWalls
-        jmp wallchoice
+        jmp wallChoice
     
     straightDouble2:
         mov si, doubleStraightAngle2
         call drawWalls
-        jmp wallchoice
+        jmp wallChoice
 
     straightDouble3:
         mov si, doubleStraightAngle3
         call drawWalls
-        jmp wallchoice
+        jmp wallChoice
 
     straightDouble4:
         mov si, doubleStraightAngle4
         call drawWalls
-        jmp wallchoice
+        jmp wallChoice
     
-        clearScreen:
-        mov ax, 0xA000
-        mov es, ax
-        mov di, 0
-        mov cx, 320*200
+        clearScreen:    ; Clears the screen by writing zeros to the video memory segment.
+            mov ax, 0xA000
+            mov es, ax
+            mov di, 0
+            mov cx, 320*200
         rep stosb
         ret 
 
