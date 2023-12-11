@@ -1,14 +1,13 @@
-#!/bin/bash
 set -Cue
 
-thisDir="$(cd "$(dirname "$0")" && pwd)"
-rootDir="$(cd "${thisDir}/../../.." && pwd)"
-binDir="${rootDir}/git/2023-2024-project-2-x86-retrogaming-team-8/PacMan/bin"
+THIS_DIR="$(cd "$(dirname "$0")" && pwd)"
+ROOT_DIR="$(cd "${THIS_DIR}" && pwd)"
+BIN_DIR="${ROOT_DIR}/bin"
 
-echo "$binDir"
+echo "ROOT_DIR: ${ROOT_DIR}"
 
-cd "${thisDir}" \
-    && nasm maze.asm -f bin -o "${binDir}/maze.com"
+cd "${THIS_DIR}" && \
+    nasm pacman.asm -f bin -o "${BIN_DIR}/pacman.com"
 
 
 
