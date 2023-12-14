@@ -53,6 +53,18 @@ section .text          ; Set up the video mode
 
 ; Change the movement to the left by calculating the position
 moveLeft:
+        .collisionLeft:
+            mov ax, [position]
+            sub ax, 2
+            mov cx, 320
+            div cx
+            mov bx,ax
+            mov ah, 20h
+            mov cx, dx 
+            mov dx, bx
+            int 10h
+            cmp al, 0x20
+            je stopPacLeft
     call clearPacMan
     mov si, pacmanChompLeft1
     sub word [position], 1*2
@@ -61,6 +73,18 @@ moveLeft:
 
 ; Change the movement to the right by calculating the position
 moveRight:
+        .collisionRight:
+            mov ax, [position]
+            add ax, 12
+            mov cx, 320
+            div cx
+            mov bx,ax
+            mov ah, 20h
+            mov cx, dx 
+            mov dx, bx
+            int 10h
+            cmp al, 0x20
+            je stopPacRight
     call clearPacMan
     mov si, pacmanChompRight1
     add word [position], 1*2
@@ -70,6 +94,18 @@ moveRight:
 
 ; Change the movement to go up by calculating the position
 moveUp:
+    .collisionUp:
+        mov ax, [position]
+        add ax, 2
+        mov cx, 200
+        div cx
+        mov bx,ax
+        mov ah, 20h
+        mov cx, dx 
+        mov dx, bx
+        int 10h
+        cmp al, 0x20
+        je stopPacUp
     call clearPacMan
     mov si, pacmanChompUp1
     sub word [position], 320*2
@@ -79,6 +115,19 @@ moveUp:
 
 ; Change the movement to go down by calculating the position
 moveDown:
+    .collisionDown:
+        mov ax, [position]
+        sub ax, 12
+        mov cx, 200
+        div cx
+        mov bx,ax
+        mov ah, 20h
+        mov cx, dx 
+        mov dx, bx
+        int 10h
+        cmp al, 0x20
+        je stopPacDown
+
     call clearPacMan
     mov si, pacmanChompDown1
     add word [position], 320*2
