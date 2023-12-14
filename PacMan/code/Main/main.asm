@@ -20,3 +20,4 @@ section .text
     %include "../Map/Map.asm"
     %include "../Sprite/Sprite.asm"
     %include "../Sprite/SpriteList.asm"
+    %include "../Collision/Collision.asm"
