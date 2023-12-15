@@ -8,33 +8,33 @@
 
 The Brainstorming section was mainly used at the beginning of the project to find our desired solution and what we wanted to do for the game but it was also used for the functional specifications, and the different documents we needed to do.
 
-![brainstorming](../../images/Notion1.png)
-![brainstorming](../../images/Notion2.png)
+![brainstorming](../../Images/Notion1.png)
+![brainstorming](../../Images/Notion2.png)
 
 ## Tasks
 
 The task section was mainly used to assign work progress for team members to ensure progress in the project, it was divided on Documents, Oral presentation and the game on itself.
 
-![tasks](../../images/Notion3.png)
-![tasks](../../images/Notion4.png)
-![tasks](../../images/Notion5.png)
+![tasks](../../Images/Notion3.png)
+![tasks](../../Images/Notion4.png)
+![tasks](../../Images/Notion5.png)
 
 ## Projects
 
 The projects section has been made to create each aspect of the project that we needed to create, from the documents to the prototype on itself.
 
-![Projects](../../images/Notion6.png)
+![Projects](../../Images/Notion6.png)
 
 ## Resources
 
 The resources section was created as a section to help the team members when needed basic knowledge on how to use Github, VsCode, DosBox were created. The other parts that were created also included a short tutorial on how to start using assembly and the given resources to ensure that every member was ready to work.
 
-![Resources](../../images/Notion7.png)
-![Resources](../../images/Notion8.png)
-![Resources](../../images/Notion9.png)
-![Resources](../../images/Notion10.png)
-![Resources](../../images/Notion11.png)
-![Resources](../../images/Notion12.png)
+![Resources](../../Images/Notion7.png)
+![Resources](../../Images/Notion8.png)
+![Resources](../../Images/Notion9.png)
+![Resources](../../Images/Notion10.png)
+![Resources](../../Images/Notion11.png)
+![Resources](../../Images/Notion12.png)
 
 ## Conclusion
 
