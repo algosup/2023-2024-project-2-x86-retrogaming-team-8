@@ -56,11 +56,11 @@
 
 ## **3. Personas & Use Case**
 
-![Alt text](../../Images/Philippebourseillerfixed.jpg)
+![Alt text](../../../images/Philippebourseillerfixed.jpg)
 
-![Alt text](../../Images/Lisaescofferfixed.jpg)
+![Alt text](../../../images/Lisaescofferfixed.jpg)
 
-![Alt text](../../Images/Ethanbergerfixed.jpg)
+![Alt text](../../../images/Ethanbergerfixed.jpg)
 
 ### Use Cases
 
@@ -422,29 +422,29 @@ Level
 The level is structured into a grid, with the maze comprising 28 by 31 tiles. Each individual subdivision within the grid is referred to as a 'Tile'.
 -   Maze
 The original 1980 Pac-Man level layout will be faithfully recreated, with strict adherence to the layout depicted in the reference image. The blue lines demarcate boundaries that neither Pac-Man nor the ghosts can traverse.
-![Maze](../images/maze.png)
+![Maze](../../images/maze.png)
 The walls within the level exhibit a distinct blue border and transparent fill, each being 1/2 Grid thick. When walls adjoin each other, the inner border is removed to create the illusion of seamless connection. Additionally, a 30% rounded effect will be applied to every corner, akin to the border-radius effect in CSS.
 -   Gums 
 Normal Gums are square and occupy 1/4 the size of a tile, positioned at the center of a tile. Super Gums, on the other hand, are circular and match the diameter of a tile, with their centers also positioned at the center of the tile.
 -   Fruits
 Fruits are centrally positioned within a tile. The graphical representation of Fruits should fit within a square with sides measuring 5/4th of a tile's size. The design of Fruits should be pixelated, with simplified colors to accommodate technical limitations.
-![Fruits](../images/fruits.png)
+![Fruits](../../images/fruits.png)
 -   Ghost Spawning Box (GSB)
 The Ghost Spawning Box, located at the center of the maze, serves as the point from which ghosts emerge. Unlike other walls in the maze, the GSB's walls lack rounded edges.
-![ghost spawning box](../images/ghost-spawning-box.png)
+![ghost spawning box](../../images/ghost-spawning-box.png)
 Internally, the box measures 6x3 tiles and features a 2-tile wide white door positioned in the middle of the top wall. While the player is unable to traverse the box, ghosts possess the ability to pass through it.
 ### **11. User Interface**
 - **Font**
 The user interface employs a monospace sans-serif font, with uppercase white characters to ensure high contrast against the black background. Each character occupies 7/8th of a tile, seamlessly integrating within the grid layout.
 - **Game Score**
 Positioned two tiles above the maze, the "HIGH SCORE" text is centrally aligned at the top of the screen, with the numerical value displayed below. The rightmost digit in the high score aligns under the "O" of "SCORE". Additionally, the current score is presented as "1UP", horizontally aligned with "HIGH SCORE", with the "P" of "1UP" positioned 3 tiles to the left of the "H" of "HIGH SCORE". The numerical value aligns horizontally with the numbers under "HIGH SCORE", with the rightmost digit offset by 1 character to the right of the "P" in "1UP".
-![game score](../images/game-score.png)
+![game score](../../images/game-score.png)
 - **Game Ready**
 At the commencement of the game, the message "READY!" is displayed on the corridor just below the Ghost Spawning Box, utilizing the same font as the rest of the UI but in yellow. This message vanishes upon game initiation.
-![game ready](../images/game-ready.png)
+![game ready](../../images/game-ready.png)
 - **Game Over**
 Upon depletion of all lives, the "GAME OVER" screen appears in the corridor under the Ghost Spawning Box, utilizing the same font as the rest of the UI but in red. This message remains visible for 3 seconds before transitioning to the leaderboard. The spacing between "GAME" and "OVER" measures 2 tiles.
-![game over](../images/game-over.png)
+![game over](../../images/game-over.png)
 ### **11. Evaluation Criteria**
 
 - **Enjoyability:**
