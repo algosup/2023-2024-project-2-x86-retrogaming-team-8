@@ -8,9 +8,9 @@ The focus for this week was primarily on the advancement of the game. We have co
 
 1. **Game Development:** We have advanced on the graphics of the game, and we are now mainly working on the input handling and the maze rendering for the game.
 
-   ![Game Development Progress](/images/Game_Development.png)
-   ![Game Development Progress](/images/Game_Development2.png)
-   ![Game Development Progress](/images/Game_Development3.png)
+   ![Game Development Progress](../../Images/Game_Development.png)
+   ![Game Development Progress](../../Images/Game_Development2.png)
+   ![Game Development Progress](../../Images/Game_Development3.png)
 
 2. **Technical Specifications development:** Our tech lead's main task during the week has been doing the technical specifications, and he has advanced, we are now polishing the document to meet the deadline.
 
@@ -18,9 +18,9 @@ The focus for this week was primarily on the advancement of the game. We have co
 
 1. **Game Development Progress:** The team has continued the game development phase. In terms of KPI's we have advanced properly as to what was expected for the week
 
-![KPI Progress](/images/KPI5.png)
+![KPI Progress](../../Images/KPI5.png)
 
-![KPI Progress](/images/KPI6.png)
+![KPI Progress](../../Images/KPI6.png)
 
 1. **Technical Specifications refinement:** We are going to go during the weekend and on monday through a polishing period on the document to verify that everything is up to the desired standards.
 

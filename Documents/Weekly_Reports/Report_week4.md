@@ -1,4 +1,4 @@
-# Weekly Report 3 (Monday 20th-Friday 24th): Assembly Project Progress
+# Weekly Report 4 (Monday 27th-Friday 1st): Assembly Project Progress
 
 ## Overview
 
@@ -14,9 +14,9 @@ The focus for this week was primarily on the input handling and the maze. We hav
 
 1. **Game Development Progress:** Because the team has been stuck doing the input handling and graphics, the KPI's (game-related) have not advanced properly as to what was expected for the week; the ones for the documents have advanced nicely.
 
-![KPI Progress](/images/KPI7.png)
+![KPI Progress](../../Images/KPI7.png)
 
-![KPI Progress](/images/KPI8.png)
+![KPI Progress](../../Images/KPI8.png)
 
 ## Next Steps
 
