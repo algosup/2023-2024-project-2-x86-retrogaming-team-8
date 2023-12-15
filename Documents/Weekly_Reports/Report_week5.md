@@ -1,4 +1,4 @@
-# Weekly Report 3 (Monday 4th-Friday 8th): Assembly Project Progress
+# Weekly Report 5 (Monday 4th-Friday 8th): Assembly Project Progress
 
 ## Overview
 
@@ -30,4 +30,4 @@ Looking ahead to the upcoming week:
 
 ## Conclusion
 
-In summary, the fifth week has been a good advancement, we managed to finish what we were set on and the team has now great spirits to continue.
+In summary, the fifth week has been a good advancement, we managed to finish what we were set on and the team has now great spirits to continue on the next tasks.
