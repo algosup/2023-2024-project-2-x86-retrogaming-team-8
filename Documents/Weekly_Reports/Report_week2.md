@@ -8,7 +8,7 @@ The focus for this week was primarily on the advancement of the game. We have st
 
 1. **Learning development:** The process of learning the Assembly language is progressing smoothly, thanks to the courses we've had and the knowledge-sharing sessions we have done as a team. The practical application of assembly language concepts learned in the classes is proving beneficial in the coding process as we have managed to display a ghost.
 
-   ![Game Development Progress](/images/progress.png)
+   ![Game Development Progress](../../Images/progress.png)
 
 2. **Test-plan development:** Our Quality Assurance (QA) team has started creating the test plan. Work is underway on the test cases that will be executed so that the quality desired for the game is attained.(<https://docs.google.com/document/d/18oJf03Rifq5PoPpgGfUZ4SS_PsCGHNe7a3kLFncPYKQ/edit>)
 
@@ -16,9 +16,9 @@ The focus for this week was primarily on the advancement of the game. We have st
 
 1. **Game Development Progress:** The team has initiated the game development phase, building upon the functional groundwork laid in the previous week. In terms of KPI's we have advanced properly as to what was expected for the week
 
-![KPI Progress](/images/KPI3.png)
+![KPI Progress](../../Images/KPI3.png)
 
-![KPI Progress](/images/KPI4.png)
+![KPI Progress](../../Images/KPI4.png)
 
 1. **Test-plan Refinement:** Efforts have been directed towards refining and expanding the Test-plan. This includes testing scenarios to address various aspects of the game's functionality and performance.
 
