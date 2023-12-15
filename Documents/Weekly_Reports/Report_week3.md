@@ -8,9 +8,9 @@ The focus for this week was primarily on the advancement of the game. We have co
 
 1. **Game Development:** We have advanced on the graphics of the game, and we are now mainly working on the input handling and the maze rendering for the game.
 
-   ![Game Development Progress](/images/Game_Development.png)
-   ![Game Development Progress](/images/Game_Development2.png)
-   ![Game Development Progress](/images/Game_Development3.png)
+   ![Game Development Progress](../../Images/Game_Development.png)
+   ![Game Development Progress](../../Images/Game_Development2.png)
+   ![Game Development Progress](../../Images/Game_Development3.png)
 
 2. **Technical Specifications development:** Our tech lead's main task during the week has been doing the technical specifications, and he has advanced, we are now polishing the document to meet the deadline.
 
