@@ -16,9 +16,9 @@ The focus for this week was primarily on the advancement of the game. We have st
 
 1. **Game Development Progress:** The team has initiated the game development phase, building upon the functional groundwork laid in the previous week. In terms of KPI's we have advanced properly as to what was expected for the week
 
-![KPI Progress](/images/KPI3.png)
+![KPI Progress](../../Images/KPI3.png)
 
-![KPI Progress](/images/KPI4.png)
+![KPI Progress](../../Images/KPI4.png)
 
 1. **Test-plan Refinement:** Efforts have been directed towards refining and expanding the Test-plan. This includes testing scenarios to address various aspects of the game's functionality and performance.
 
