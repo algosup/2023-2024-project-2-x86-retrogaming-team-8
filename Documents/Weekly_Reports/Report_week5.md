@@ -8,7 +8,7 @@ The focus for this week was primarily on preparing the prototype for the game. W
 
 1. **Game Development:** We have succeeded in printing pac-man and in showing the maze:
 
-    ![Game progress](/images/Game_Development4.png)
+    ![Game progress](../../Images/Game_Development4.png)
 
 2. **Functional development:** The Program manager has worked on the functional specifications to refine them to the new specifications of what we are looking to do.
 
@@ -16,9 +16,9 @@ The focus for this week was primarily on preparing the prototype for the game. W
 
 1. **Game Development Progress:** Because the team has managed to finish the input handling and the maze, the KPI's have returned to being on track,as to what was expected for the week. The ones for the documents have advanced nicely the functional has advanced as expected.
 
-![KPI Progress](/images/KPI9.png)
+![KPI Progress](../../Images/KPI9.png)
 
-![KPI Progress](/images/KPI10.png)
+![KPI Progress](../../Images/KPI10.png)
 
 ## Next Steps
 

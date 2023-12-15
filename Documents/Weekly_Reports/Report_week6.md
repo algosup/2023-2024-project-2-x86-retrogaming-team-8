@@ -10,16 +10,16 @@ The focus for this week was mainly on the collisions for the game. We have manag
 
 2. **Functional development:** The Program manager has finished polishing the functional specifications they are now more in scope towards what we actually have and they are also more detailed.
 
-![Functional](/images/Functional1.png)
-![Functional](/images/Functional2.png)
-![Functional](/images/Functional3.png)
+![Functional](../../Images/Functional1.png)
+![Functional](../../Images/Functional2.png)
+![Functional](../../Images/Functional3.png)
 
 ## Project Planning and Management
 
 1. **Game Development Progress:** The Kpi's have not advanced that much during this week in terms of game development, in terms of documents however we are very close to completion as we are expecting to have them all completed by the end of the next week.
 
-![KPI Progress](/images/KPI11.png)
-![KPI Progress](/images/KPI12.png)
+![KPI Progress](../../Images/KPI12.png)
+![KPI Progress](../../Images/KPI11.png)
 
 1. **Tasks:** The chart to assign the progress for the week has also been completed on our Notion in reason to that the Gantt chart has been transformed into the tasks they will be addressed in the Notion file.
 
