@@ -128,7 +128,7 @@ stopPacRight:
 moveUp:
     call clearPacMan
     mov si, pacmanChompUp1
-    sub word [position], 320*2
+    sub word [position], 320
     call drawPacMan
     jmp gameLoops
 
@@ -158,7 +158,7 @@ collisionDown:
 moveDown:
     call clearPacMan
     mov si, pacmanChompDown1
-    add word [position], 320*2
+    add word [position], 320
     call drawPacMan
     jmp gameLoops
 
