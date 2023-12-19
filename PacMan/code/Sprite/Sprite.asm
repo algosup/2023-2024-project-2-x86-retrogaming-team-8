@@ -25,16 +25,6 @@ call beginPacMan
     cmp ah, 50h 
     je collisionDown
 
-    
-    
-        ; clearScreen:    ; Clears the screen by writing zeros to the video memory segment.
-        ; mov ax, 0xA000
-        ; mov es, ax
-        ; mov di, 0
-        ; mov cx, 320*200
-        ; rep stosb
-        ; ret
-
        beginPacMan:
        mov si, pacmanChompLeft1
        call drawPacMan
@@ -68,6 +58,10 @@ collisionLeft:
     int 10h
     cmp al, 0x20
     je stopPacLeft
+    cmp al, 0x54
+    je stopPacLeft
+    cmp al, 0x57
+    je addPoint
     jmp moveLeft
 
 toggleframepacman:
@@ -109,6 +103,10 @@ collisionRight:
     int 10h
     cmp al, 0x20
     je stopPacRight
+    cmp al, 0x54
+    je stopPacRight
+    cmp al, 0x57
+    je addPoint
     jmp moveRight
 
 toggleframepacmanright:
@@ -148,6 +146,10 @@ stopPacRight:
         int 10h
         cmp al, 0x20
         je stopPacUp
+        cmp al, 0x54
+        je stopPacUp
+        cmp al, 0x57
+        je addPoint
         jmp moveUp
 
 toggleframepacmanUp:
@@ -190,6 +192,10 @@ collisionDown:
     int 10h
     cmp al, 0x20
     je stopPacDown
+    cmp al, 0x54
+    je stopPacDown
+    ;cmp al, 0x57
+    ;je addPoint
     jmp moveDown
 
 toggleframepacmanD:
@@ -223,19 +229,13 @@ clearPacMan:
     call drawPacMan
     ret
 
+addPoint:
+    add word [score], 2
+
+    jmp gameLoops
+
 
 waitLoop:
     loop waitLoop
     ret
 
-    ; drawPacMan:
-    ; mov ax, 0xA000
-    ; mov es, ax
-    ; mov dx, 10
-    ;      eachline:
-    ;       mov cx, 10
-    ;       rep movsb
-    ;       add di, 320-10
-    ;       dec dx
-    ;       jnz eachline
-    ;       ret        
