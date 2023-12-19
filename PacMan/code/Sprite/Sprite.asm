@@ -61,7 +61,7 @@ collisionLeft:
     cmp al, 0x54
     je stopPacLeft
     cmp al, 0x57
-    je addPoint
+    je addPointLeft
     jmp moveLeft
 
 toggleframepacman:
@@ -106,7 +106,7 @@ collisionRight:
     cmp al, 0x54
     je stopPacRight
     cmp al, 0x57
-    je addPoint
+    je addPointRight
     jmp moveRight
 
 toggleframepacmanright:
@@ -149,7 +149,7 @@ stopPacRight:
         cmp al, 0x54
         je stopPacUp
         cmp al, 0x57
-        je addPoint
+        je addPointUp
         jmp moveUp
 
 toggleframepacmanUp:
@@ -194,8 +194,8 @@ collisionDown:
     je stopPacDown
     cmp al, 0x54
     je stopPacDown
-    ;cmp al, 0x57
-    ;je addPoint
+    cmp al, 0x57
+    je addPointDown
     jmp moveDown
 
 toggleframepacmanD:
@@ -229,11 +229,21 @@ clearPacMan:
     call drawPacMan
     ret
 
-addPoint:
+addPointLeft:
     add word [score], 2
+    jmp moveLeft
 
-    jmp gameLoops
+addPointRight:
+    add word [score], 2
+    jmp moveRight
 
+addPointUp:
+    add word [score], 2
+    jmp moveUp
+
+addPointDown:
+    add word [score], 2
+    jmp moveDown
 
 waitLoop:
     loop waitLoop
