@@ -1,3 +1,6 @@
+section .data
+    frameofpacman dw pacmanChompLeft1 
+
 section .text          ; Set up the video mode
 
 call beginPacMan
@@ -30,7 +33,7 @@ call beginPacMan
         ; mov di, 0
         ; mov cx, 320*200
         ; rep stosb
-        ; ret 
+        ; ret
 
        beginPacMan:
        mov si, pacmanChompLeft1
@@ -67,13 +70,24 @@ collisionLeft:
     je stopPacLeft
     jmp moveLeft
 
+toggleframepacman:
+    cmp word [frameofpacman], pacmanChompLeft2
+    jne .toFrame1
+    mov word [frameofpacman], pacmanChompLeft1
+    ret
+    .toFrame1:
+        mov word [frameofpacman], pacmanChompLeft2
+       
+    ret
+
 moveLeft:
     call clearPacMan
-    mov si, pacmanChompLeft1
+    call toggleframepacman
+    mov si, word [frameofpacman]
     sub word [position], 1
-    call drawPacMan 
+    call drawPacMan
     jmp gameLoops
-
+      
 stopPacLeft:
     call clearPacMan
     mov si, pacmanDefault
@@ -86,20 +100,30 @@ collisionRight:
     mov dx, 1
     mov ax, [position]
     add ax, 970
-    mov bx, 320         
-    div bx              
-    mov bx, ax          
-    mov ah, 0Dh         
-    mov cx, dx          
-    mov dx, bx          
+    mov bx, 320
+    div bx
+    mov bx, ax
+    mov ah, 0Dh
+    mov cx, dx
+    mov dx, bx
     int 10h
     cmp al, 0x20
     je stopPacRight
     jmp moveRight
 
+toggleframepacmanright:
+    cmp word [frameofpacman], pacmanChompRight2
+    jne .toFrame1
+    mov word [frameofpacman], pacmanChompRight1
+    ret
+    .toFrame1:
+        mov word [frameofpacman], pacmanChompRight2
+    ret
+
 moveRight:
     call clearPacMan
-    mov si, pacmanChompRight1
+    call toggleframepacmanright
+    mov si, word [frameofpacman]
     add word [position], 1
     call drawPacMan
     jmp gameLoops
@@ -115,21 +139,34 @@ stopPacRight:
         mov dx, 1
         mov ax, [position]
         sub ax, 315
-        mov bx, 320         
-        div bx              
-        mov bx, ax          
-        mov ah, 0Dh         
-        mov cx, dx          
-        mov dx, bx          
+        mov bx, 320
+        div bx
+        mov bx, ax
+        mov ah, 0Dh
+        mov cx, dx
+        mov dx, bx
         int 10h
         cmp al, 0x20
         je stopPacUp
         jmp moveUp
+
+toggleframepacmanUp:
+    cmp word [frameofpacman], pacmanChompUp2
+    jne .toFrame1
+    mov word [frameofpacman], pacmanChompUp1
+    ret
+    .toFrame1:
+        mov word [frameofpacman], pacmanChompUp2
+
+    ret
+
 moveUp:
     call clearPacMan
-    mov si, pacmanChompUp1
+    call toggleframepacmanUp
+    mov si, word [frameofpacman]
     sub word [position], 320
     call drawPacMan
+
     jmp gameLoops
 
 stopPacUp:
@@ -143,7 +180,7 @@ stopPacUp:
 collisionDown:
     mov dx, 1
     mov ax, [position]
-    add ax, 320
+    add ax, 3205
     mov bx, 320         
     div bx              
     mov bx, ax          
@@ -155,9 +192,20 @@ collisionDown:
     je stopPacDown
     jmp moveDown
 
+toggleframepacmanD:
+    cmp word [frameofpacman], pacmanChompDown2
+    jne .toFrame1
+    mov word [frameofpacman], pacmanChompDown1
+    ret
+    .toFrame1:
+        mov word [frameofpacman], pacmanChompDown2
+
+    ret
+
 moveDown:
     call clearPacMan
-    mov si, pacmanChompDown1
+    call toggleframepacmanD
+    mov si, word [frameofpacman]
     add word [position], 320
     call drawPacMan
     jmp gameLoops
