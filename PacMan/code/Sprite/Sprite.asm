@@ -105,7 +105,7 @@ beginGhostPink:
           jnz .eachline
           ret
 
-; Change the movement to the left by calculating the position
+; Detection of different color so we can do different labels for different actions
 collisionLeft:
     mov dx, 1
     mov ax, [position]
@@ -123,8 +123,11 @@ collisionLeft:
     je stopPacLeft
     cmp al, 0x57
     je addPointLeft
+    cmp al, 0x04
+    je teleportLtoR
     jmp moveLeft
 
+; producing animation by using different sprites at a fast rate
 toggleframepacman:
     cmp word [frameofpacman], pacmanChompLeft2
     jne .toFrame1
@@ -135,6 +138,7 @@ toggleframepacman:
        
     ret
 
+; producing animation by using different sprites at a fast rate
 moveLeft:
     call clearPacMan
     call toggleframepacman
@@ -142,13 +146,20 @@ moveLeft:
     sub word [position], 1
     call drawPacMan
     jmp gameLoops
-      
+
+; Stop the pacman and go back to the detection
 stopPacLeft:
     call clearPacMan
-    mov si, pacmanDefault
+    mov si, pacmanChompLeft1
     call drawPacMan
-    jmp gameLoop
+    jmp gameLoops
 
+teleportLtoR:
+    call clearPacMan
+    mov word [position], 26068
+    mov si, pacmanChompRight1
+    call drawPacMan
+    jmp gameLoops
 ; Change the movement to the right by calculating the position
 
 collisionRight:
@@ -168,6 +179,8 @@ collisionRight:
     je stopPacRight
     cmp al, 0x57
     je addPointRight
+    cmp al, 0x03
+    je teleportRtoL
     jmp moveRight
 
 toggleframepacmanright:
@@ -189,9 +202,16 @@ moveRight:
 
 stopPacRight:
     call clearPacMan
-    mov si, pacmanDefault
+    mov si, pacmanChompRight1
     call drawPacMan
-    jmp gameLoop
+    jmp gameLoops
+
+teleportRtoL:
+    call clearPacMan
+    mov word [position], 25932
+    mov si, pacmanChompLeft1
+    call drawPacMan
+    jmp gameLoops
 
 ; Change the movement to go up by calculating the position
     collisionUp:
@@ -234,9 +254,9 @@ moveUp:
 
 stopPacUp:
     call clearPacMan
-    mov si, pacmanDefault
+    mov si, pacmanChompUp1
     call drawPacMan
-    jmp gameLoop
+    jmp gameLoops
 
 ; Change the movement to go down by calculating the position
 
@@ -279,9 +299,9 @@ moveDown:
 
 stopPacDown:
     call clearPacMan
-    mov si, pacmanDefault
+    mov si, pacmanChompDown1
     call drawPacMan
-    jmp gameLoop
+    jmp gameLoops
  
 ; Clear the ancient pacman sprite by using the emptyspace sprite
 clearPacMan:

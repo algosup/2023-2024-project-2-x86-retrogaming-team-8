@@ -29,7 +29,7 @@ tilemap  db 26, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 30, 31, 22, 22, 
          db  0,  0,  0,  0,  0, 25, 42, 13, 12, 42, 42, 42, 42, 42, 42, 42, 42, 42, 42, 13, 12, 42, 24,  0,  0,  0,  0,  0
          db  0,  0,  0,  0,  0, 25, 42, 13, 12, 42, 38, 23, 36,  1,  1, 37, 23, 39, 42, 13, 12, 42, 24,  0,  0,  0,  0,  0
          db 22, 22, 22, 22, 22, 16, 42, 17, 16, 42, 24,  0,  0,  0,  0,  0,  0, 25, 42, 17, 16, 42, 17, 22, 22, 22, 22, 22
-         db  0,  0,  0,  0,  0,  0, 42, 42, 42, 42, 24,  0,  0,  0,  0,  0,  0, 25, 42, 42, 42, 42,  0,  0,  0,  0,  0,  0
+         db 45,  0,  0,  0,  0,  0, 42, 42, 42, 42, 24,  0,  0,  0,  0,  0,  0, 25, 42, 42, 42, 42,  0,  0,  0,  0,  0, 44
          db 23, 23, 23, 23, 23, 15, 42, 14, 15, 42 ,24,  0,  0,  0,  0,  0,  0, 25, 42, 14, 15, 42, 14, 23, 23, 23, 23, 23
          db  0,  0,  0,  0,  0, 25, 42, 13, 12, 42, 41, 22, 22, 22, 22, 22, 22, 40, 42, 13, 12, 42, 24,  0,  0,  0,  0,  0
          db  0,  0,  0,  0,  0, 25, 42, 13, 12, 42, 42, 42, 42, 42, 42, 42, 42, 42, 42, 13, 12, 42, 24,  0,  0,  0,  0,  0
@@ -48,10 +48,10 @@ tilemap  db 26, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 30, 31, 22, 22, 
          db 29, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 28
  
     position dw 32079 ; Pacman position
-    positionGhostPink dw 25026 ; Ghost position
-    positionGhostRed dw 90000
+    positionGhostPink dw 25999 ; Ghost position
+    positionGhostRed dw 25999
     positionGhostGreen dw 25999
-    positionGhostBlue dw 26010
+    positionGhostBlue dw 25999
     Column dw 28    
     Row dw 31       
     pixelNumber dw 1920 
@@ -171,6 +171,10 @@ section .text
             je onePellet
             cmp al, 43
             je oneSuperPellet
+            cmp al, 44
+            je printTeleportSpot1
+            cmp al, 45
+            je printTeleportSpot2
         ret
 
     empty:   ; Draw a sprite.                
@@ -350,6 +354,15 @@ section .text
 
     oneSuperPellet:
         mov si, superPellet
+        call drawWalls
+        jmp wallChoice
+
+    printTeleportSpot1:
+        mov si, teleportSpot1
+        call drawWalls
+        jmp wallChoice
+    printTeleportSpot2:
+        mov si, teleportSpot2
         call drawWalls
         jmp wallChoice
 
