@@ -4,6 +4,10 @@ section .data
 section .text          ; Set up the video mode
 
 call beginPacMan
+call beginGhostPink
+call beginGhostRed
+call beginGhostGreen
+call beginGhostBlue
 
     gameLoops:
     ; Wait for keypress
@@ -43,6 +47,63 @@ call beginPacMan
           jnz eachline
           ret
 
+; draw ghosts
+beginGhostPink:
+       mov si, ghostPink
+       call drawGhostPink
+       ret
+    drawGhostPink:
+    mov di, [positionGhostPink]
+    mov dx, 10
+          .eachline:
+          mov cx, 10
+          rep movsb
+          add di, 320-10
+          dec dx
+          jnz .eachline
+          ret
+    beginGhostRed:
+       mov si, ghostRed
+       call drawGhostRed
+       ret
+    drawGhostRed:
+    mov di, [positionGhostRed]
+    mov dx, 10
+          .eachline:
+          mov cx, 10
+          rep movsb
+          add di, 320-10
+          dec dx
+          jnz .eachline
+          ret
+    beginGhostGreen:
+       mov si, ghostGreen
+       call drawGhostGreen
+       ret
+    drawGhostGreen:
+    mov di, [positionGhostGreen]
+    mov dx, 10
+          .eachline:
+          mov cx, 10
+          rep movsb
+          add di, 320-10
+          dec dx
+          jnz .eachline
+          ret
+    beginGhostBlue:
+       mov si, ghostBlue
+       call drawGhostBlue
+       ret
+    drawGhostBlue:
+    mov di, [positionGhostBlue]
+    mov dx, 10
+          .eachline:
+          mov cx, 10
+          rep movsb
+          add di, 320-10
+          dec dx
+          jnz .eachline
+          ret
 
 ; Change the movement to the left by calculating the position
 collisionLeft:
