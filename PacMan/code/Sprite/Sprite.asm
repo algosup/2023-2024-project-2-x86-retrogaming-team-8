@@ -1,7 +1,7 @@
 section .data
     frameofpacman dw pacmanChompLeft1 
 
-section .text          ; Set up the video mode
+section .text          
 
 call beginPacMan
 call beginGhostPink
@@ -34,7 +34,6 @@ call beginGhostBlue
        call drawPacMan
        ret
 
-
 ; Printing line by line the PacMan using the postion
     drawPacMan:
     mov di, [position]
@@ -48,7 +47,7 @@ call beginGhostBlue
           ret
 
 ; draw ghosts
-beginGhostPink:
+    beginGhostPink:
        mov si, ghostPink
        call drawGhostPink
        ret
@@ -62,6 +61,7 @@ beginGhostPink:
           dec dx
           jnz .eachline
           ret
+
     beginGhostRed:
        mov si, ghostRed
        call drawGhostRed
@@ -76,6 +76,7 @@ beginGhostPink:
           dec dx
           jnz .eachline
           ret
+
     beginGhostGreen:
        mov si, ghostGreen
        call drawGhostGreen
@@ -90,6 +91,7 @@ beginGhostPink:
           dec dx
           jnz .eachline
           ret
+
     beginGhostBlue:
        mov si, ghostBlue
        call drawGhostBlue
@@ -134,8 +136,7 @@ toggleframepacman:
     mov word [frameofpacman], pacmanChompLeft1
     ret
     .toFrame1:
-        mov word [frameofpacman], pacmanChompLeft2
-       
+        mov word [frameofpacman], pacmanChompLeft2  
     ret
 
 ; producing animation by using different sprites at a fast rate
@@ -240,7 +241,6 @@ toggleframepacmanUp:
     ret
     .toFrame1:
         mov word [frameofpacman], pacmanChompUp2
-
     ret
 
 moveUp:
@@ -286,7 +286,6 @@ toggleframepacmanD:
     ret
     .toFrame1:
         mov word [frameofpacman], pacmanChompDown2
-
     ret
 
 moveDown:
@@ -329,4 +328,3 @@ addPointDown:
 waitLoop:
     loop waitLoop
     ret
-

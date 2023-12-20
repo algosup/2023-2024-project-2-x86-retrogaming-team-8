@@ -48,10 +48,10 @@ tilemap  db 26, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 30, 31, 22, 22, 
          db 29, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 28
  
     position dw 32079 ; Pacman position
-    positionGhostPink dw 25999 ; Ghost position
-    positionGhostRed dw 25999
+    positionGhostPink dw 25026 ; Ghost position
+    positionGhostRed dw 90000
     positionGhostGreen dw 25999
-    positionGhostBlue dw 25999
+    positionGhostBlue dw 26010
     Column dw 28    
     Row dw 31       
     pixelNumber dw 1920 
