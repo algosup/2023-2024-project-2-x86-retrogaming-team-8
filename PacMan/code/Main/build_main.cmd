@@ -4,6 +4,6 @@ set "ROOT_DIR=%SCRIPT_DIR%..\..\.."
 set "NASM=%ROOT_DIR%\nasm\nasm"
 set "BIN_DIR=%ROOT_DIR%\bin"
 
-"%NASM%" Main.asm -f bin -o "%BIN_DIR%\Main.com"
+"%NASM%" main.asm -f bin -o "%BIN_DIR%\Main.com"
 
 pause
