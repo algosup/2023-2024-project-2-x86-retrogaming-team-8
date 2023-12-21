@@ -23,16 +23,39 @@
 ## Installation
 For this project we have to us dos-bot to emulate a particular system processor that is x86 Architecture, This will help us to run the assembly code on, as the code shall be done in different interface.
 
-To launch the programm, you just need to click on on the shortcut named pacmanWindows or pacmanApple depending on wich system you are in.
+
+## Installation
+For this project we have to us dos-bot to emulate a particular system processor that is x86 Architecture, This will help us to run the assembly code on, as the code shall be done in different interface.
+
+## Steps to follow execute the pacman game
+1. Open the <b>Pacman</b> folder
+2. Open the <b>code</b> subfolder
+3. Open the <b>main</b> subfolder
+4. launch the <b>Build_main.cmd</b> file
+5. go back to <b>2023-2024-project-2-x86-retrogaming-team-8</b> folder
+6. Execute <b>Pacman for windows</b> or <b>Pacman.cmd</b>
+
+## Steps to follow to execute the game Pacman on MacOS
+
+1. Open the <b>Pacman</b> folder
+2. Open the <b>code</b> subfolder
+3. Open the <b>main</b> subfolder
+4. Carry the <b>bin</b> subfolder, and the <b>pamcman.sh</b> file and put it in the main subfolder
+5. Open the terminal and direct yourself in the main subfolder
+6. On the terminal type the command <b>chmod +x ./build_main.sh</b> and press enter
+7. Next, type <b>./build_main.sh</b> and press enter
+8. Repeat step 4 and 5 and use <b>./pacman.sh</b> instead of <b>./build_main.sh</b>
+9. when dosbox open, type <b>main</b> and press enter to launch the game.
+
 
 ## Features
   1.  Recreate the game pacman in Assembly programming Language.
   2.  The game most visualy look like that of the year it was published "1970s".
-  3.  The program must be run in dos-box.
+  3.  The program must be run in dos-bot.
   4.  Some newly features can be added on the game.
 
-##Disclaimer
-  this is a fangame to honnor the game "Pacman" by NAMCO.
+## Disclaimer
+  This is a fangame to honnor the game "Pacman" by NAMCO.
 
 ## Contributors
 ### Management
